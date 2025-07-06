@@ -1,45 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fadi Sameer Botros | Portfolio</title>
   <style>
+    :root {
+      --primary: #0077b6;
+      --secondary: #00b4d8;
+      --background: #f5f5f5;
+      --text: #333;
+      --card-bg: #fff;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
-      color: #333;
+      background-color: var(--background);
+      color: var(--text);
+      transition: direction 0.3s ease;
     }
+
     header {
-      background-color: #0077b6;
+      background-color: var(--primary);
       color: white;
-      padding: 1rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
+
     nav {
       display: flex;
       justify-content: center;
       gap: 1rem;
       margin: 1rem;
     }
+
     nav button {
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--secondary);
+      color: white;
       cursor: pointer;
+      font-weight: bold;
     }
+
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 1rem;
     }
+
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
+
+    h2 {
+      border-bottom: 2px solid var(--secondary);
+      display: inline-block;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
     .rtl {
       direction: rtl;
       text-align: right;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
@@ -57,13 +120,13 @@
   <div class="container">
     <section id="about">
       <h2>About Me</h2>
-      <p>A graduate software engineer with a passion for web development and backend technologies. I specialize in PHP and Laravel and have experience with front-end frameworks like React and Vue.js.</p>
+      <p>A passionate software engineer specializing in backend development with PHP & Laravel. I also have experience with modern frontend technologies like React and Vue.js.</p>
       <p><strong>Education:</strong><br> Bachelor's in IT – Software Engineering<br>Arab International University (AIU), Syria<br>Expected Graduation: 2025</p>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
-      <ul>
+      <ul id="skillsList">
         <li>PHP, Laravel</li>
         <li>JavaScript, React, Vue.js</li>
         <li>HTML, CSS</li>
@@ -74,18 +137,18 @@
 
     <section id="projects">
       <h2>Projects</h2>
-      <ul>
-        <li>Employment Mediation System (Junior Year Project)</li>
-        <li>Assistance App for the Visually Impaired (Senior Year Project)</li>
-        <li>Graduation System (Class Project)</li>
-      </ul>
+      <div class="projects-grid" id="projectCards">
+        <div class="card">Employment Mediation System (Junior Year Project)</div>
+        <div class="card">Assistance App for the Visually Impaired (Senior Year Project)</div>
+        <div class="card">Graduation System (Class Project)</div>
+      </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p>📍 Damascus, Syria</p>
       <p>📞 +963938641779</p>
-      <p>✉️ fadibotros99@gmail.com</p>
+      <p>✉️ <a href="mailto:fadibotros99@gmail.com">fadibotros99@gmail.com</a></p>
       <p>🔗 <a href="https://www.linkedin.com/in/fadi-botros-069668276" target="_blank">LinkedIn</a></p>
       <p>💻 <a href="https://github.com/fadiBotros2002" target="_blank">GitHub</a></p>
     </section>
@@ -98,13 +161,17 @@
         summary: "مهندس برمجيات | مطور Backend (PHP, Laravel)",
         about: {
           title: "من أنا",
-          content: `خريج هندسة برمجيات شغوف بتطوير الويب وخاصة تقنيات الباك إند. أتخصص في PHP و Laravel ولدي خبرة في React و Vue.js.`,
-          education: `التعليم: بكالوريوس في تكنولوجيا المعلومات – هندسة البرمجيات\nالجامعة الدولية الخاصة للعلوم والتكنولوجيا (AIU)، سوريا\nتاريخ التخرج المتوقع: 2025`
+          content: `مهندس برمجيات شغوف بتطوير الويب، أختص في تقنيات الباك إند باستخدام PHP و Laravel، وأمتلك خبرة أيضاً في تقنيات الواجهة مثل React و Vue.js.`,
+          education: `التعليم: بكالوريوس في تكنولوجيا المعلومات – هندسة البرمجيات<br>الجامعة الدولية الخاصة للعلوم والتكنولوجيا (AIU)، سوريا<br>تاريخ التخرج المتوقع: 2025`
         },
         skills: "المهارات",
         skillsList: ["PHP, Laravel", "JavaScript, React, Vue.js", "HTML, CSS", "MySQL", "إدارة المشاريع"],
         projects: "المشاريع",
-        projectList: ["نظام الوساطة الوظيفية (مشروع السنة الثالثة)", "تطبيق المساعدة لذوي الإعاقة البصرية (مشروع التخرج)", "نظام التخرج (مشروع صفي)"],
+        projectList: [
+          "نظام الوساطة الوظيفية (مشروع السنة الثالثة)",
+          "تطبيق المساعدة لذوي الإعاقة البصرية (مشروع التخرج)",
+          "نظام التخرج (مشروع صفي)"
+        ],
         contact: "تواصل معي",
         address: "📍 دمشق، سوريا",
         phone: "📞 +963938641779",
@@ -113,21 +180,34 @@
     };
 
     function switchLang(lang) {
-      if (lang === 'ar') {
-        document.body.classList.add('rtl');
+      const isArabic = lang === 'ar';
+      document.body.classList.toggle('rtl', isArabic);
+
+      if (isArabic) {
         document.getElementById('name').textContent = translations.ar.name;
         document.getElementById('summary').textContent = translations.ar.summary;
+
         document.querySelector('#about h2').textContent = translations.ar.about.title;
         document.querySelector('#about p').innerHTML = translations.ar.about.content;
         document.querySelector('#about p + p').innerHTML = `<strong>${translations.ar.about.title}:</strong><br>${translations.ar.about.education}`;
+
         document.querySelector('#skills h2').textContent = translations.ar.skills;
-        document.querySelector('#skills ul').innerHTML = translations.ar.skillsList.map(skill => `<li>${skill}</li>`).join('');
+        document.getElementById('skillsList').innerHTML = translations.ar.skillsList.map(skill => `<li>${skill}</li>`).join('');
+
         document.querySelector('#projects h2').textContent = translations.ar.projects;
-        document.querySelector('#projects ul').innerHTML = translations.ar.projectList.map(p => `<li>${p}</li>`).join('');
+        document.getElementById('projectCards').innerHTML = translations.ar.projectList.map(p => `<div class="card">${p}</div>`).join('');
+
         document.querySelector('#contact h2').textContent = translations.ar.contact;
-        document.querySelector('#contact').innerHTML += `<p>${translations.ar.address}</p><p>${translations.ar.phone}</p><p>${translations.ar.email}</p>`;
+        document.querySelector('#contact').innerHTML = `
+          <h2>${translations.ar.contact}</h2>
+          <p>${translations.ar.address}</p>
+          <p>${translations.ar.phone}</p>
+          <p>✉️ <a href="mailto:${translations.ar.email.split(' ')[1]}">${translations.ar.email}</a></p>
+          <p>🔗 <a href="https://www.linkedin.com/in/fadi-botros-069668276" target="_blank">LinkedIn</a></p>
+          <p>💻 <a href="https://github.com/fadiBotros2002" target="_blank">GitHub</a></p>
+        `;
       } else {
-        location.reload();
+        location.reload(); // reload original English version
       }
     }
   </script>
