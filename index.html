@@ -2,32 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fadi Sameer Botros | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fadi Sameer Botros | Software Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Fadi Sameer Botros</h1>
-    <p>Software Engineer | Backend Developer</p>
+  <header class="navbar">
+    <div class="logo">Fadi Botros</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="about.html" data-translate="about">About Me</a>
-    <a href="skills.html" data-translate="skills">Skills</a>
-    <a href="projects.html" data-translate="projects">Projects</a>
-    <a href="contact.html" data-translate="contact">Contact</a>
-    <button onclick="switchLang('ar')">العربية</button>
-  </nav>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm <span class="highlight">Fadi</span><br>Software Engineer</h1>
+      <p>I build scalable and efficient web applications using PHP, Laravel, and modern frontend frameworks.</p>
+      <div class="hero-buttons">
+        <a href="projects.html" class="btn-primary">View Projects</a>
+        <a href="contact.html" class="btn-outline">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="profile.jpg" alt="Fadi Botros" />
+    </div>
+  </section>
 
-  <div class="container">
-    <section>
-      <h2>Welcome</h2>
-      <p>This is the personal portfolio of Fadi Sameer Botros, a passionate software engineer specialized in backend technologies like PHP and Laravel.</p>
-    </section>
-  </div>
-
-  <script src="script.js"></script>
+  <script>
+    // Optional JS animations or interactivity
+  </script>
 </body>
 </html>
- 
