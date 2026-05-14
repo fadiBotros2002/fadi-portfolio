@@ -50,7 +50,7 @@ const TRANSLATIONS = {
             linkedin: 'ملفي على LinkedIn',
             emailCta: 'إرسال بريد',
             statProjects: 'مشاريع مختارة',
-            statYears: 'سنتان خبرة عملية',
+            statYears: 'سنتين خبرة عملية',
             statDegree: 'تخرج البكالوريوس'
         },
         about: {
