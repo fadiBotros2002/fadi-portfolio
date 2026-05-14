@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadi Sameer Botros · Software Engineer</title>
+    <!-- Initialize theme & language early to avoid FOUC -->
+    <script>
+        (function() {
+            try {
+                const storedTheme = localStorage.getItem('theme');
+                if (storedTheme === 'light' || storedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', storedTheme);
+                } else {
+                    // default to light when no preference
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+
+                const storedLang = localStorage.getItem('language');
+                if (storedLang === 'ar') {
+                    document.documentElement.lang = 'ar';
+                    document.documentElement.dir = 'rtl';
+                } else if (storedLang === 'en') {
+                    document.documentElement.lang = 'en';
+                    document.documentElement.dir = 'ltr';
+                }
+            } catch (e) {
+                console.warn('Early init failed', e);
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Theme variable overrides (light/dark) -->
+    <link rel="stylesheet" href="assets/styles/themes/light.css">
+    <link rel="stylesheet" href="assets/styles/themes/dark.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="navigation"></div>
+    
+    <!-- Hero Section -->
+    <div id="hero"></div>
+    
+    <!-- About Section -->
+    <div id="about"></div>
+
+    <!-- Experience -->
+    <div id="experience"></div>
+    
+    <!-- Skills Section -->
+    <div id="skills"></div>
+    
+    <!-- Projects Section -->
+    <div id="projects"></div>
+    
+    <!-- Contact Section -->
+    <div id="contact"></div>
+    
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="js/app.js"></script>
+    <script src="js/projects.js"></script>
+    <script>
+        console.log('HTML script tag loaded');
+        
+        // Load components
+        async function loadComponents() {
+            try {
+                console.log('Starting to load components...');
+                const components = [
+                    { id: 'navigation', file: 'components/navigation.html' },
+                    { id: 'hero', file: 'components/hero.html' },
+                    { id: 'about', file: 'components/about.html' },
+                    { id: 'experience', file: 'components/experience.html' },
+                    { id: 'skills', file: 'components/skills.html' },
+                    { id: 'projects', file: 'components/projects.html' },
+                    { id: 'contact', file: 'components/contact.html' },
+                    { id: 'footer', file: 'components/footer.html' }
+                ];
+                
+                for (const component of components) {
+                    console.log(`Loading component: ${component.file}`);
+                    const response = await fetch(component.file);
+                    if (!response.ok) {
+                        throw new Error(`Failed to load ${component.file}: ${response.status}`);
+                    }
+                    const html = await response.text();
+                    const element = document.getElementById(component.id);
+                    if (element) {
+                        element.innerHTML = html;
+                        console.log(`Successfully loaded ${component.file}`);
+                    } else {
+                        console.error(`Element with id ${component.id} not found`);
+                    }
+                }
+                
+                console.log('All components loaded, initializing app...');
+                console.log('PortfolioApp exists:', typeof window.PortfolioApp);
+                // Initialize app after components are loaded and DOM is ready
+                if (window.PortfolioApp) {
+                    window.portfolioAppInstance = new PortfolioApp();
+                    console.log('PortfolioApp initialized');
+                } else {
+                    console.error('PortfolioApp class not found');
+                    console.log('Available window properties:', Object.keys(window));
+                }
+            } catch (error) {
+                console.error('Error loading components:', error);
+            }
+        }
+        
+        // Load components when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM Content Loaded');
+            loadComponents();
+        });
+    </script>
+</body>
+</html>

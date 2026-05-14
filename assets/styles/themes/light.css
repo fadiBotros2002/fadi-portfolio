@@ -1,0 +1,65 @@
+/* Light Theme Variables */
+[data-theme="light"] {
+    /* Primary Colors */
+    --color-primary: #0b1220;
+    --color-primary-light: #0ea5e9;
+    --color-primary-dark: #020617;
+    --color-secondary: #64748b;
+    --color-accent: #f59e0b;
+    --color-success: #10b981;
+    --color-error: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+    
+    /* Neutral Colors */
+    --color-white: #ffffff;
+    --color-gray-50: #f8fafc;
+    --color-gray-100: #f1f5f9;
+    --color-gray-200: #e2e8f0;
+    --color-gray-300: #cbd5e1;
+    --color-gray-400: #94a3b8;
+    --color-gray-500: #64748b;
+    --color-gray-600: #475569;
+    --color-gray-700: #334155;
+    --color-gray-800: #1e293b;
+    --color-gray-900: #0f172a;
+    
+    /* Background Colors */
+    --bg-primary: var(--color-white);
+    --bg-secondary: var(--color-gray-50);
+    --bg-tertiary: var(--color-gray-100);
+    --bg-inverse: var(--color-gray-900);
+    
+    /* Text Colors */
+    --text-primary: var(--color-gray-900);
+    --text-secondary: var(--color-gray-700);
+    --text-tertiary: var(--color-gray-600);
+    --text-inverse: var(--color-white);
+    --text-muted: var(--color-gray-500);
+    
+    /* Border Colors */
+    --border-primary: var(--color-gray-200);
+    --border-secondary: var(--color-gray-300);
+    --border-focus: var(--color-primary);
+    
+    /* Shadow Colors */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-hover: rgba(0, 0, 0, 0.15);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(148deg, #050a12 0%, #132447 38%, #0e7490 88%, #164e63 100%);
+    --gradient-secondary: linear-gradient(135deg, #64748b 0%, #94a3b8 100%);
+    --gradient-success: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+    
+    /* Component Specific */
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --navbar-text: var(--color-gray-700);
+    --card-bg: var(--color-white);
+    --card-border: var(--color-gray-200);
+    --input-bg: var(--color-white);
+    --input-border: var(--color-gray-300);
+    --button-primary-bg: var(--color-primary);
+    --button-primary-text: var(--color-white);
+    --button-secondary-bg: var(--color-gray-200);
+    --button-secondary-text: var(--color-gray-700);
+}
