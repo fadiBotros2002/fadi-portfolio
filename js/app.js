@@ -65,7 +65,7 @@ class PortfolioApp {
         this.setupActiveNavigation();
         this.setupScrollEffects();
         this.setupThemeToggle();
-        this.setupLanguageToggle();
+        this.setupLanguagePicker();
     }
     
     setupMobileNav() {
@@ -265,12 +265,23 @@ class PortfolioApp {
         });
     }
     
-    setupLanguageToggle() {
-        document.querySelectorAll('.language-toggle').forEach((languageToggle) => {
-            languageToggle.addEventListener('click', async () => {
-                const next = window.I18n.nextLang(this.getCurrentLanguage());
-                await this.setLanguage(next);
+    setupLanguagePicker() {
+        this.syncLanguageSelects(this.getCurrentLanguage());
+
+        document.querySelectorAll('.language-select').forEach((select) => {
+            select.addEventListener('change', async (event) => {
+                const lang = event.target.value;
+                await this.setLanguage(lang);
+                this.syncLanguageSelects(lang);
             });
+        });
+    }
+
+    syncLanguageSelects(lang) {
+        document.querySelectorAll('.language-select').forEach((select) => {
+            if (select.value !== lang) {
+                select.value = lang;
+            }
         });
     }
 
@@ -281,6 +292,7 @@ class PortfolioApp {
     async setLanguage(lang) {
         await window.I18n.load(lang);
         localStorage.setItem('language', lang);
+        this.syncLanguageSelects(lang);
         this.applyTranslations();
         if (typeof renderProjects === 'function') {
             renderProjects();

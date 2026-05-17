@@ -30,18 +30,28 @@
                 <button type="button" class="theme-toggle theme-toggle--menu" aria-label="Toggle theme">
                     <i class="fas fa-moon theme-icon"></i>
                 </button>
-                <button type="button" class="language-toggle language-toggle--menu" aria-label="Toggle language">
-                    <i class="fas fa-globe"></i>
-                </button>
+                <div class="language-picker language-picker--menu">
+                    <label class="visually-hidden" for="language-select-menu">Choose language</label>
+                    <select id="language-select-menu" class="language-select" aria-label="Choose language">
+                        <option value="en">English</option>
+                        <option value="ar">العربية</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
             </li>
         </ul>
         <div class="nav-controls">
             <button class="theme-toggle" aria-label="Toggle theme">
                 <i class="fas fa-moon theme-icon"></i>
             </button>
-            <button class="language-toggle" aria-label="Toggle language">
-                <i class="fas fa-globe"></i>
-            </button>
+            <div class="language-picker">
+                <label class="visually-hidden" for="language-select-nav">Choose language</label>
+                <select id="language-select-nav" class="language-select" aria-label="Choose language">
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
         </div>
         <div class="hamburger">
             <span class="bar"></span>
