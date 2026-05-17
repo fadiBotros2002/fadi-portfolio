@@ -6,7 +6,7 @@ const CONFIG = {
         ar: { name: 'العربية', dir: 'rtl' },
         en: { name: 'English', dir: 'ltr' }
     },
-    DEFAULT_LANGUAGE: 'ar',
+    DEFAULT_LANGUAGE: 'en',
     THEMES: {
         light: { name: 'light' },
         dark: { name: 'dark' }
@@ -424,33 +424,23 @@ class PortfolioApp {
     }
     
     setupThemeToggle() {
-        const themeToggle = document.querySelector('.theme-toggle');
-        if (themeToggle) {
-            console.log('Theme toggle found, setting up event listener');
+        document.querySelectorAll('.theme-toggle').forEach((themeToggle) => {
             themeToggle.addEventListener('click', () => {
-                console.log('Theme toggle clicked');
                 const currentTheme = this.getCurrentTheme();
                 const newTheme = currentTheme === 'light' ? 'dark' : 'light';
                 this.setTheme(newTheme);
             });
-        } else {
-            console.log('Theme toggle not found');
-        }
+        });
     }
     
     setupLanguageToggle() {
-        const languageToggle = document.querySelector('.language-toggle');
-        if (languageToggle) {
-            console.log('Language toggle found, setting up event listener');
+        document.querySelectorAll('.language-toggle').forEach((languageToggle) => {
             languageToggle.addEventListener('click', () => {
-                console.log('Language toggle clicked');
                 const currentLang = this.getCurrentLanguage();
                 const newLang = currentLang === 'ar' ? 'en' : 'ar';
                 this.setLanguage(newLang);
             });
-        } else {
-            console.log('Language toggle not found');
-        }
+        });
     }
     
     getCurrentLanguage() {
@@ -555,13 +545,9 @@ class PortfolioApp {
     }
     
     updateThemeToggle(theme) {
-        const themeToggle = document.querySelector('.theme-toggle');
-        if (themeToggle) {
-            const icon = themeToggle.querySelector('i');
-            if (icon) {
-                icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-            }
-        }
+        document.querySelectorAll('.theme-toggle i').forEach((icon) => {
+            icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        });
     }
     
     showNotification(message, type = 'info') {

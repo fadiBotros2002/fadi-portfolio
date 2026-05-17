@@ -161,7 +161,7 @@ function renderProjectLinkRows(project, lang, ui) {
 
 function renderProjects() {
     const projectsGrid = document.getElementById('projectsGrid');
-    const currentLang = localStorage.getItem('language') || 'ar';
+    const currentLang = localStorage.getItem('language') || 'en';
 
     const ui =
         currentLang === 'en'

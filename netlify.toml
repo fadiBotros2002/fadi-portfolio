@@ -1,0 +1,7 @@
+# Static portfolio — publish from repo root
+[build]
+  publish = "."
+
+# Optional: suggest a readable site name in Netlify UI:
+# Site configuration → Site details → Change site name → e.g. fadi-botros
+# Result: https://fadi-botros.netlify.app

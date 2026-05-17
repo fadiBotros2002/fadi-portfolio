@@ -5,7 +5,7 @@ export const CONFIG = {
         ar: { name: 'العربية', dir: 'rtl' },
         en: { name: 'English', dir: 'ltr' }
     },
-    DEFAULT_LANGUAGE: 'ar',
+    DEFAULT_LANGUAGE: 'en',
     
     // Theme Configuration
     THEMES: {
