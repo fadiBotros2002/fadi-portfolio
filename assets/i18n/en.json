@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Profile",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "linkedin": "LinkedIn",
+    "contact": "Contact"
+  },
+  "hero": {
+    "kicker": "Fadi Sameer Botros · Damascus, Syria",
+    "title": "Hello, I'm Fadi Sameer Botros",
+    "subtitle": "Software engineer — Backend (Laravel)",
+    "description": "I build reliable APIs and Filament admin experiences, automate workflows with n8n, and ship solid foundations in HTML/CSS/JS and Blade with hands-on React/Vue work.",
+    "viewProjects": "View projects",
+    "contactMe": "Contact me",
+    "linkedin": "LinkedIn profile",
+    "emailCta": "Email me",
+    "statProjects": "Highlighted builds",
+    "statYears": "Two years of hands-on work",
+    "statDegree": "B.Sc. graduation year",
+    "scrollHint": "Scroll to explore"
+  },
+  "about": {
+    "title": "Profile",
+    "description1": "Motivated software engineer focused on backend development with PHP/Laravel, workflow automation using n8n, and admin systems with FilamentPHP.",
+    "description2": "Strong fundamentals in HTML, CSS, JavaScript, and Blade, with practical experience in React/Vue, applying MVC, RESTful design, events, queues, and Stripe integrations.",
+    "location": "Damascus, Syria",
+    "cardTitle": "At a glance",
+    "factFocus": "Focus",
+    "factEdu": "Education",
+    "factLang": "Languages",
+    "factFocusValue": "Backend · APIs · Automation",
+    "factEduValue": "B.Sc. Software Engineering — AIU (2025)",
+    "factLangValue": "Arabic · English · German",
+    "h1": "CI/CD with GitHub Actions · Docker · Linux (Ubuntu)",
+    "h2": "Virtualization: Proxmox & VMware ESXi",
+    "h3": "MySQL (indexing & tuning), SQL Server, and JMeter load testing"
+  },
+  "experience": {
+    "title": "Work experience",
+    "lead": "A path combining infrastructure, automation, and software engineering.",
+    "samware": {
+      "role": "Junior System Administrator (Trainee to Staff)",
+      "b1": "Data center: hands-on hardware installation—servers, switches, and storage in production DC.",
+      "b2": "Virtualization: assisted VMware ESXi deployment and managed virtualized server environments.",
+      "b3": "Automation: built an n8n monitoring bridge from Proxmox API to Telegram for instant alerts."
+    },
+    "freelance": {
+      "role": "Freelance software development",
+      "summary": "Designing and shipping web systems and APIs with Laravel and Filament, plus Firebase integrations, payments, and load testing."
+    },
+    "education": {
+      "degree": "B.Sc. Software Engineering",
+      "school": "Arab International University (AIU) · Graduated 2025",
+      "languages": "<strong>Languages:</strong> Arabic (native) · English (very good) · German (good)"
+    }
+  },
+  "skills": {
+    "title": "Core skills",
+    "lead": "Skill groups aligned with my CV—no decorative percentage bars.",
+    "g1Title": "Languages & frameworks",
+    "g1Hint": "Application and backend layers",
+    "g2Title": "Automation & infrastructure",
+    "g2Hint": "Operations, containers, production environments",
+    "g3Title": "Databases & performance",
+    "g3Hint": "Data reliability and load testing",
+    "g4Title": "Tools & concepts",
+    "g4Hint": "From design to release",
+    "g5Title": "Server deployment",
+    "g5Hint": "Hosting platforms I have used"
+  },
+  "projects": {
+    "title": "Selected projects",
+    "lead": "Highlights: <strong>VisionMate</strong> and <strong>Wazefni</strong> — each with LinkedIn demos and posts.",
+    "ui": {
+      "github": "GitHub",
+      "featured": "Featured",
+      "wip": "In progress",
+      "minorStudent": "Student task"
+    },
+    "items": {
+      "visionmate": {
+        "title": "VisionMate",
+        "period": "February – June 2025 · Capstone",
+        "description": "Platform supporting people with visual impairments: Laravel & MySQL, React volunteer app, Filament admin, AI features and Stripe donations. Represented AIU at the Damascus International Fair (TEXPO).",
+        "links": {
+          "video": "Project video (LinkedIn)",
+          "texpo": "Damascus International Fair · TEXPO"
+        }
+      },
+      "wazefni": {
+        "title": "Wazefni",
+        "period": "October 2024 – January 2025 · University project",
+        "description": "Employment mediation app with AI-assisted CV building, job matching, employer-side candidate filtering, and skill tests. Shared on LinkedIn.",
+        "links": { "video": "Project video (LinkedIn)" }
+      },
+      "smart-expense": {
+        "title": "Smart Expense Tracker",
+        "period": "In progress · freelance",
+        "description": "Laravel 12, Firebase notifications, queued jobs, service layer and API resources. No public GitHub repo yet."
+      },
+      "proxmox-alerts": {
+        "title": "Proxmox → Telegram alert system",
+        "period": "SAMWare-Cs · 2025",
+        "description": "Monitoring automation bridging the Proxmox API to Telegram via n8n for instant infrastructure alerts."
+      },
+      "graduation-system": {
+        "title": "Graduation Management System",
+        "period": "February 2026",
+        "description": "Small student assignment to automate a few graduation-related steps (not a flagship product). Laravel & MySQL."
+      },
+      "maestro": {
+        "title": "Maestro — musical instruments store",
+        "period": "May – June 2023",
+        "description": "Full-stack store with MySQL CRUD, secure PHP authentication, and client-side JS validation."
+      },
+      "civil-registry": {
+        "title": "Civil Registry System",
+        "period": "August 2023",
+        "description": "Secure CRUD civil records management and authentication using ASP.NET Web Forms and SQL Server."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's connect",
+    "subtitleHint": "Pick the channel that works best for you",
+    "description": "Open to collaborating on Laravel products, APIs, and automation.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "copy": "Copy",
+    "map": "Map",
+    "socialTitle": "Professional links",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "footer": {
+    "tagline": "Software engineer — Laravel · APIs · Automation",
+    "copyright": "© 2026 Fadi Sameer Botros."
+  }
+}

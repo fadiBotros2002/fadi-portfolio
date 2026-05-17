@@ -20,6 +20,9 @@
                 if (storedLang === 'ar') {
                     document.documentElement.lang = 'ar';
                     document.documentElement.dir = 'rtl';
+                } else if (storedLang === 'de') {
+                    document.documentElement.lang = 'de';
+                    document.documentElement.dir = 'ltr';
                 } else {
                     document.documentElement.lang = 'en';
                     document.documentElement.dir = 'ltr';
@@ -61,8 +64,11 @@
     <!-- Footer -->
     <div id="footer"></div>
 
-    <script src="js/app.js"></script>
+    <script src="js/i18n/config.js"></script>
+    <script src="js/i18n/loader.js"></script>
+    <script src="js/projects-catalog.js"></script>
     <script src="js/projects.js"></script>
+    <script src="js/app.js"></script>
     <script>
         console.log('HTML script tag loaded');
         
@@ -97,15 +103,11 @@
                     }
                 }
                 
-                console.log('All components loaded, initializing app...');
-                console.log('PortfolioApp exists:', typeof window.PortfolioApp);
-                // Initialize app after components are loaded and DOM is ready
                 if (window.PortfolioApp) {
                     window.portfolioAppInstance = new PortfolioApp();
-                    console.log('PortfolioApp initialized');
+                    await window.portfolioAppInstance.ready;
                 } else {
                     console.error('PortfolioApp class not found');
-                    console.log('Available window properties:', Object.keys(window));
                 }
             } catch (error) {
                 console.error('Error loading components:', error);

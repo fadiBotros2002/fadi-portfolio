@@ -2,11 +2,6 @@
 console.log('app.js file started executing');
 
 const CONFIG = {
-    LANGUAGES: {
-        ar: { name: 'العربية', dir: 'rtl' },
-        en: { name: 'English', dir: 'ltr' }
-    },
-    DEFAULT_LANGUAGE: 'en',
     THEMES: {
         light: { name: 'light' },
         dark: { name: 'dark' }
@@ -29,191 +24,38 @@ const CONFIG = {
     }
 };
 
-const TRANSLATIONS = {
-    ar: {
-        nav: {
-            home: 'الرئيسية',
-            about: 'نبذة',
-            experience: 'الخبرة',
-            skills: 'مهارات',
-            projects: 'مشاريع',
-            linkedin: 'LinkedIn',
-            contact: 'تواصل'
-        },
-        hero: {
-            title: 'مرحباً، أنا فادي سمير بطرس',
-            subtitle: 'مهندس برمجيات — Backend (Laravel)',
-            description:
-                'أركز على بناء APIs موثوقة، لوحات إدارة بـ Filament، وأتمتة سير العمل عبر n8n، مع أساس قوي في الواجهات (HTML/CSS/JS وBlade وتجربة عملية في React وVue).',
-            viewProjects: 'عرض المشاريع',
-            contactMe: 'تواصل معي',
-            linkedin: 'ملفي على LinkedIn',
-            emailCta: 'إرسال بريد',
-            statProjects: 'مشاريع مختارة',
-            statYears: 'سنتين خبرة عملية',
-            statDegree: 'تخرج البكالوريوس'
-        },
-        about: {
-            title: 'نبذة',
-            description1:
-                'مهندس برمجيات متحمس، أتخصص في تطوير الـ Backend باستخدام PHP وLaravel، مع خبرة قوية في أتمتة سير العمل عبر n8n، وبناء APIs ولوحات إدارة باستخدام FilamentPHP.',
-            description2:
-                'لدي أساس متين في الواجهات (HTML وCSS وJavaScript وBlade) وتجربة عملية في React وVue، وأعمل ضمن ممارسات MVC وتصميم RESTful والأحداث والقوائم والتكامل مع بوابات الدفع مثل Stripe.',
-            location: 'دمشق، سوريا',
-            cardTitle: 'ملخص سريع',
-            factFocus: 'التركيز',
-            factEdu: 'التعليم',
-            factLang: 'اللغات',
-            h1: 'CI/CD عبر GitHub Actions · Docker · Linux (Ubuntu)',
-            h2: 'افتراضية: Proxmox وVMware ESXi',
-            h3: 'MySQL (فهرسة وتحسين) وSQL Server واختبارات تحميل بـ JMeter'
-        },
-        skills: {
-            title: 'المهارات الأساسية',
-            g1Title: 'لغات وإطارات',
-            g1Hint: 'طبقة التطبيق والواجهات الخلفية',
-            g2Title: 'أتمتة وبنية تحتية',
-            g2Hint: 'تشغيل، حاويات، وبيئات إنتاجية',
-            g3Title: 'قواعد البيانات والأداء',
-            g3Hint: 'موثوقية البيانات واختبار التحميل',
-            g4Title: 'أدوات ومفاهيم',
-            g4Hint: 'من التصميم إلى الإطلاق',
-            g5Title: 'نشر الخوادم',
-            g5Hint: 'بيئات استضافة عملت عليها'
-        },
-        projects: {
-            title: 'مشاريع مختارة',
-            viewProject: 'عرض المشروع',
-            github: 'GitHub'
-        },
-        contact: {
-            title: 'تواصل معي',
-            subtitle: 'لنتواصل',
-            subtitleHint: 'اختر الطريقة المناسبة لك للتواصل',
-            description: 'جاهز للتعاون على منتجات Laravel وواجهات API وأتمتة العمليات.',
-            email: 'البريد الإلكتروني',
-            phone: 'الهاتف',
-            location: 'الموقع',
-            copy: 'نسخ',
-            map: 'الخريطة',
-            socialTitle: 'روابط مهنية',
-            social: {
-                github: 'GitHub',
-                linkedin: 'LinkedIn',
-                twitter: 'Twitter',
-                instagram: 'Instagram'
-            }
-        },
-        footer: {
-            copyright: '© 2026 فادي سمير بطرس.'
-        }
-    },
-    en: {
-        nav: {
-            home: 'Home',
-            about: 'Profile',
-            experience: 'Experience',
-            skills: 'Skills',
-            projects: 'Projects',
-            linkedin: 'LinkedIn',
-            contact: 'Contact'
-        },
-        hero: {
-            title: 'Hello, I\'m Fadi Sameer Botros',
-            subtitle: 'Software engineer — Backend (Laravel)',
-            description:
-                'I build reliable APIs and Filament admin experiences, automate workflows with n8n, and ship solid foundations in HTML/CSS/JS and Blade with hands-on React/Vue work.',
-            viewProjects: 'View projects',
-            contactMe: 'Contact me',
-            linkedin: 'LinkedIn profile',
-            emailCta: 'Email me',
-            statProjects: 'Highlighted builds',
-            statYears: 'Two years of hands-on work',
-            statDegree: 'B.Sc. graduation year'
-        },
-        about: {
-            title: 'Profile',
-            description1:
-                'Motivated software engineer focused on backend development with PHP/Laravel, workflow automation using n8n, and admin systems with FilamentPHP.',
-            description2:
-                'Strong fundamentals in HTML, CSS, JavaScript, and Blade, with practical experience in React/Vue, applying MVC, RESTful design, events, queues, and Stripe integrations.',
-            location: 'Damascus, Syria',
-            cardTitle: 'At a glance',
-            factFocus: 'Focus',
-            factEdu: 'Education',
-            factLang: 'Languages',
-            h1: 'CI/CD with GitHub Actions · Docker · Linux (Ubuntu)',
-            h2: 'Virtualization: Proxmox & VMware ESXi',
-            h3: 'MySQL (indexing & tuning), SQL Server, and JMeter load testing'
-        },
-        skills: {
-            title: 'Core skills',
-            g1Title: 'Languages & frameworks',
-            g1Hint: 'Application and backend layers',
-            g2Title: 'Automation & infrastructure',
-            g2Hint: 'Operations, containers, production environments',
-            g3Title: 'Databases & performance',
-            g3Hint: 'Data reliability and load testing',
-            g4Title: 'Tools & concepts',
-            g4Hint: 'From design to release',
-            g5Title: 'Server deployment',
-            g5Hint: 'Hosting platforms I have used'
-        },
-        projects: {
-            title: 'Selected projects',
-            viewProject: 'View project',
-            github: 'GitHub'
-        },
-        contact: {
-            title: 'Contact',
-            subtitle: 'Let\'s connect',
-            subtitleHint: 'Pick the channel that works best for you',
-            description: 'Open to collaborating on Laravel products, APIs, and automation.',
-            email: 'Email',
-            phone: 'Phone',
-            location: 'Location',
-            copy: 'Copy',
-            map: 'Map',
-            socialTitle: 'Professional links',
-            social: {
-                github: 'GitHub',
-                linkedin: 'LinkedIn',
-                twitter: 'Twitter',
-                instagram: 'Instagram'
-            }
-        },
-        footer: {
-            copyright: '© 2026 Fadi Sameer Botros.'
-        }
-    }
-};
-
 class PortfolioApp {
     constructor() {
-        console.log('PortfolioApp constructor called');
-        this.init();
+        this.ready = this.init();
     }
-    
-    init() {
-        console.log('PortfolioApp init called');
-        this.setupInitialSettings();
-        this.setupEventListeners();
-        this.setupAnimations();
-    }
-    
-    setupInitialSettings() {
-        const currentLang = localStorage.getItem('language') || CONFIG.DEFAULT_LANGUAGE;
-        this.setLanguage(currentLang);
-        
+
+    async init() {
+        const currentLang = this.getCurrentLanguage();
+        await window.I18n.load(currentLang);
+
         const currentTheme = localStorage.getItem('theme') || CONFIG.DEFAULT_THEME;
         this.setTheme(currentTheme);
-        
+
         document.body.style.opacity = '0';
         document.body.style.transition = `opacity ${CONFIG.ANIMATIONS.normal} ease`;
-        
+
         setTimeout(() => {
             document.body.style.opacity = '1';
         }, 100);
+
+        this.applyTranslations();
+        this.setupEventListeners();
+        this.setupAnimations();
+
+        if (typeof renderProjects === 'function') {
+            renderProjects();
+        }
+    }
+
+    applyTranslations() {
+        document.documentElement.lang = window.I18n.lang;
+        document.documentElement.dir = window.I18n.getDir(window.I18n.lang);
+        window.I18n.apply();
     }
     
     setupEventListeners() {
@@ -224,14 +66,6 @@ class PortfolioApp {
         this.setupScrollEffects();
         this.setupThemeToggle();
         this.setupLanguageToggle();
-        console.log('Event listeners setup completed');
-        
-        // Initialize projects after setup
-        setTimeout(() => {
-            if (typeof renderProjects === 'function') {
-                renderProjects();
-            }
-        }, 100);
     }
     
     setupMobileNav() {
@@ -383,11 +217,9 @@ class PortfolioApp {
     }
     
     setupTypingEffect() {
-        const heroTitle = document.querySelector('[data-translate="hero-title"]');
+        const heroTitle = document.querySelector('[data-i18n="hero.title"]');
         if (heroTitle) {
-            const currentLang = this.getCurrentLanguage();
-            const text = TRANSLATIONS[currentLang].hero.title;
-            
+            const text = window.I18n.t('hero.title');
             setTimeout(() => {
                 this.typeWriter(heroTitle, text, 80);
             }, 500);
@@ -435,102 +267,26 @@ class PortfolioApp {
     
     setupLanguageToggle() {
         document.querySelectorAll('.language-toggle').forEach((languageToggle) => {
-            languageToggle.addEventListener('click', () => {
-                const currentLang = this.getCurrentLanguage();
-                const newLang = currentLang === 'ar' ? 'en' : 'ar';
-                this.setLanguage(newLang);
+            languageToggle.addEventListener('click', async () => {
+                const next = window.I18n.nextLang(this.getCurrentLanguage());
+                await this.setLanguage(next);
             });
         });
     }
-    
+
     getCurrentLanguage() {
-        return localStorage.getItem('language') || CONFIG.DEFAULT_LANGUAGE;
+        return localStorage.getItem('language') || window.I18N_CONFIG.default;
     }
-    
-    setLanguage(lang) {
+
+    async setLanguage(lang) {
+        await window.I18n.load(lang);
         localStorage.setItem('language', lang);
-        document.documentElement.lang = lang;
-        document.documentElement.dir = CONFIG.LANGUAGES[lang].dir;
-        this.updateContent(lang);
-        
-        // Re-render projects when language changes
+        this.applyTranslations();
         if (typeof renderProjects === 'function') {
-            setTimeout(() => renderProjects(), 50);
+            renderProjects();
         }
-    }
-    
-    updateContent(lang) {
-        const translations = TRANSLATIONS[lang];
-        
-        this.updateElement('[data-translate="nav-home"]', translations.nav.home);
-        this.updateElement('[data-translate="nav-about"]', translations.nav.about);
-        this.updateElement('[data-translate="nav-experience"]', translations.nav.experience);
-        this.updateElement('[data-translate="nav-skills"]', translations.nav.skills);
-        this.updateElement('[data-translate="nav-projects"]', translations.nav.projects);
-        this.updateElement('[data-translate="nav-linkedin"]', translations.nav.linkedin);
-        this.updateElement('[data-translate="nav-contact"]', translations.nav.contact);
-        
-        this.updateElement('[data-translate="hero-title"]', translations.hero.title);
-        this.updateElement('[data-translate="hero-subtitle"]', translations.hero.subtitle);
-        this.updateElement('[data-translate="hero-description"]', translations.hero.description);
-        this.updateElement('[data-translate="hero-view-projects"]', translations.hero.viewProjects);
-        this.updateElement('[data-translate="hero-contact-me"]', translations.hero.contactMe);
-        this.updateElement('[data-translate="hero-linkedin"]', translations.hero.linkedin);
-        this.updateElement('[data-translate="hero-email-cta"]', translations.hero.emailCta);
-        this.updateElement('[data-translate="hero-stat-projects"]', translations.hero.statProjects);
-        this.updateElement('[data-translate="hero-stat-years"]', translations.hero.statYears);
-        this.updateElement('[data-translate="hero-stat-degree"]', translations.hero.statDegree);
-        
-        this.updateElement('[data-translate="about-title"]', translations.about.title);
-        this.updateElement('[data-translate="about-description-1"]', translations.about.description1);
-        this.updateElement('[data-translate="about-description-2"]', translations.about.description2);
-        this.updateElement('[data-translate="about-location"]', translations.about.location);
-        this.updateElement('[data-translate="about-card-title"]', translations.about.cardTitle);
-        this.updateElement('[data-translate="about-fact-focus"]', translations.about.factFocus);
-        this.updateElement('[data-translate="about-fact-edu"]', translations.about.factEdu);
-        this.updateElement('[data-translate="about-fact-lang"]', translations.about.factLang);
-        this.updateElement('[data-translate="about-h1"]', translations.about.h1);
-        this.updateElement('[data-translate="about-h2"]', translations.about.h2);
-        this.updateElement('[data-translate="about-h3"]', translations.about.h3);
-        
-        this.updateElement('[data-translate="skills-title"]', translations.skills.title);
-        this.updateElement('[data-translate="skills-g1-title"]', translations.skills.g1Title);
-        this.updateElement('[data-translate="skills-g1-hint"]', translations.skills.g1Hint);
-        this.updateElement('[data-translate="skills-g2-title"]', translations.skills.g2Title);
-        this.updateElement('[data-translate="skills-g2-hint"]', translations.skills.g2Hint);
-        this.updateElement('[data-translate="skills-g3-title"]', translations.skills.g3Title);
-        this.updateElement('[data-translate="skills-g3-hint"]', translations.skills.g3Hint);
-        this.updateElement('[data-translate="skills-g4-title"]', translations.skills.g4Title);
-        this.updateElement('[data-translate="skills-g4-hint"]', translations.skills.g4Hint);
-        this.updateElement('[data-translate="skills-g5-title"]', translations.skills.g5Title);
-        this.updateElement('[data-translate="skills-g5-hint"]', translations.skills.g5Hint);
-        
-        this.updateElement('[data-translate="projects-title"]', translations.projects.title);
-        
-        this.updateElement('[data-translate="contact-title"]', translations.contact.title);
-        this.updateElement('[data-translate="contact-subtitle"]', translations.contact.subtitle);
-        this.updateElement('[data-translate="contact-subtitle-hint"]', translations.contact.subtitleHint);
-        this.updateElement('[data-translate="contact-description"]', translations.contact.description);
-        this.updateElement('[data-translate="contact-email"]', translations.contact.email);
-        this.updateElement('[data-translate="contact-phone"]', translations.contact.phone);
-        this.updateElement('[data-translate="contact-location"]', translations.contact.location);
-        document.querySelectorAll('[data-translate="contact-copy"]').forEach((el) => {
-            el.textContent = translations.contact.copy;
-        });
-        this.updateElement('[data-translate="contact-map"]', translations.contact.map);
-        this.updateElement('[data-translate="contact-social-title"]', translations.contact.socialTitle);
-        this.updateElement('[data-translate="contact-social-github"]', translations.contact.social.github);
-        this.updateElement('[data-translate="contact-social-linkedin"]', translations.contact.social.linkedin);
-        this.updateElement('[data-translate="contact-social-twitter"]', translations.contact.social.twitter);
-        this.updateElement('[data-translate="contact-social-instagram"]', translations.contact.social.instagram);
-        this.updateElement('[data-translate="footer-copyright"]', translations.footer.copyright);
-        
-    }
-    
-    updateElement(selector, text) {
-        const element = document.querySelector(selector);
-        if (element) {
-            element.textContent = text;
+        if (this.setupTypingEffect) {
+            this.setupTypingEffect();
         }
     }
     

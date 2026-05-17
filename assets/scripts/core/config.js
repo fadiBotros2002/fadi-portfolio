@@ -3,7 +3,8 @@ export const CONFIG = {
     // Language Configuration
     LANGUAGES: {
         ar: { name: 'العربية', dir: 'rtl' },
-        en: { name: 'English', dir: 'ltr' }
+        en: { name: 'English', dir: 'ltr' },
+        de: { name: 'Deutsch', dir: 'ltr' }
     },
     DEFAULT_LANGUAGE: 'en',
     

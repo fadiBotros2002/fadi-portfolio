@@ -1618,15 +1618,6 @@ section {
     }
 }
 
-/* Bilingual toggles */
-html[lang="ar"] .i18n-en {
-    display: none !important;
-}
-
-html[lang="en"] .i18n-ar {
-    display: none !important;
-}
-
 .section-lead {
     text-align: center;
     max-width: 720px;

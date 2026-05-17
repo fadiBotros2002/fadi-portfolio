@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "about": "نبذة",
+    "experience": "الخبرة",
+    "skills": "مهارات",
+    "projects": "مشاريع",
+    "linkedin": "LinkedIn",
+    "contact": "تواصل"
+  },
+  "hero": {
+    "kicker": "فادي سمير بطرس · دمشق، سوريا",
+    "title": "مرحباً، أنا فادي سمير بطرس",
+    "subtitle": "مهندس برمجيات — Backend (Laravel)",
+    "description": "أركز على بناء APIs موثوقة، لوحات إدارة بـ Filament، وأتمتة سير العمل عبر n8n، مع أساس قوي في الواجهات (HTML/CSS/JS وBlade وتجربة عملية في React وVue).",
+    "viewProjects": "عرض المشاريع",
+    "contactMe": "تواصل معي",
+    "linkedin": "ملفي على LinkedIn",
+    "emailCta": "إرسال بريد",
+    "statProjects": "مشاريع مختارة",
+    "statYears": "سنتين خبرة عملية",
+    "statDegree": "تخرج البكالوريوس",
+    "scrollHint": "اكتشف أدناه"
+  },
+  "about": {
+    "title": "نبذة",
+    "description1": "مهندس برمجيات متحمس، أتخصص في تطوير الـ Backend باستخدام PHP وLaravel، مع خبرة قوية في أتمتة سير العمل عبر n8n، وبناء APIs ولوحات إدارة باستخدام FilamentPHP.",
+    "description2": "لدي أساس متين في الواجهات (HTML وCSS وJavaScript وBlade) وتجربة عملية في React وVue، وأعمل ضمن ممارسات MVC وتصميم RESTful والأحداث والقوائم والتكامل مع بوابات الدفع مثل Stripe.",
+    "location": "دمشق، سوريا",
+    "cardTitle": "ملخص سريع",
+    "factFocus": "التركيز",
+    "factEdu": "التعليم",
+    "factLang": "اللغات",
+    "factFocusValue": "Backend · APIs · أتمتة",
+    "factEduValue": "بكالوريوس هندسة البرمجيات — AIU (2025)",
+    "factLangValue": "عربية · إنجليزية · ألمانية",
+    "h1": "CI/CD عبر GitHub Actions · Docker · Linux (Ubuntu)",
+    "h2": "افتراضية: Proxmox وVMware ESXi",
+    "h3": "MySQL (فهرسة وتحسين) وSQL Server واختبارات تحميل بـ JMeter"
+  },
+  "experience": {
+    "title": "الخبرة العملية",
+    "lead": "مسار يجمع بين البنية التحتية، الأتمتة، وتطوير البرمجيات.",
+    "samware": {
+      "role": "مساعد أنظمة (متدرّب → موظف)",
+      "b1": "مراكز البيانات: تركيب عملي للخوادم، المبدلات، ووحدات التخزين ضمن بيئة إنتاجية.",
+      "b2": "الافتراضية: دعم نشر وإعداد VMware ESXi وإدارة بيئات الخوادم الافتراضية.",
+      "b3": "الأتمتة: بناء مراقبة آلية عبر n8n تربط Proxmox API مع Telegram لتنبيهات فورية."
+    },
+    "freelance": {
+      "role": "تطوير برمجيات مستقل",
+      "summary": "تصميم وتنفيذ أنظمة ويب وواجهات API باستخدام Laravel وFilament، مع تكاملات Firebase وخطوط دفع واختبارات تحميل."
+    },
+    "education": {
+      "degree": "بكالوريوس هندسة البرمجيات",
+      "school": "الجامعة العربية الدولية (AIU) · التخرج 2025",
+      "languages": "<strong>اللغات:</strong> عربية (لغة أم) · إنجليزية (جيد جداً) · ألمانية (جيدة)"
+    }
+  },
+  "skills": {
+    "title": "المهارات الأساسية",
+    "lead": "مجموعات مهارات مطابقة لسيرتي الذاتية — بدون أرقام تعبيرية وهمية.",
+    "g1Title": "لغات وإطارات",
+    "g1Hint": "طبقة التطبيق والواجهات الخلفية",
+    "g2Title": "أتمتة وبنية تحتية",
+    "g2Hint": "تشغيل، حاويات، وبيئات إنتاجية",
+    "g3Title": "قواعد البيانات والأداء",
+    "g3Hint": "موثوقية البيانات واختبار التحميل",
+    "g4Title": "أدوات ومفاهيم",
+    "g4Hint": "من التصميم إلى الإطلاق",
+    "g5Title": "نشر الخوادم",
+    "g5Hint": "بيئات استضافة عملت عليها"
+  },
+  "projects": {
+    "title": "مشاريع مختارة",
+    "lead": "أبرز الأعمال: <strong>VisionMate</strong> و<strong>Wazefni</strong> — مع فيديوهات ومنشورات على LinkedIn لكل مشروع.",
+    "ui": {
+      "github": "GitHub",
+      "featured": "مشروع بارز",
+      "wip": "قيد التطوير",
+      "minorStudent": "مهمة طلابية"
+    },
+    "items": {
+      "visionmate": {
+        "title": "VisionMate",
+        "period": "فبراير – يونيو 2025 · مشروع تخرّج",
+        "description": "منصة لدعم ذوي الإعاقة البصرية: Laravel وMySQL، React للمتطوعين، Filament للإدارة، تكامل AI وStripe للتبرعات. تمثيل الجامعة العربية الدولية في معرض دمشق الدولي (TEXPO).",
+        "links": {
+          "video": "فيديو المشروع (LinkedIn)",
+          "texpo": "معرض دمشق الدولي · TEXPO"
+        }
+      },
+      "wazefni": {
+        "title": "Wazefni",
+        "period": "أكتوبر 2024 – يناير 2025 · مشروع جامعي",
+        "description": "منصة وساطة توظيف مع ميزات AI لبناء السيرة واقتراح الوظائف، وتصفية المرشحين للشركات، واختبارات مهارات. تم العرض على LinkedIn.",
+        "links": { "video": "فيديو المشروع (LinkedIn)" }
+      },
+      "smart-expense": {
+        "title": "Smart Expense Tracker",
+        "period": "قيد التطوير · عمل حر",
+        "description": "Laravel 12، Firebase للإشعارات، طوابير ومهام في الخلفية، طبقة خدمات وموارد API. لا يوجد مستودع GitHub عام حالياً."
+      },
+      "proxmox-alerts": {
+        "title": "تنبيهات Proxmox عبر Telegram",
+        "period": "SAMWare-Cs · 2025",
+        "description": "أتمتة مراقبة تربط Proxmox API مع Telegram عبر n8n لإشعارات فورية عن حالة البنية."
+      },
+      "graduation-system": {
+        "title": "نظام إدارة التخرج",
+        "period": "فبراير 2026",
+        "description": "مهمة طلابية صغيرة لأتمتة خطوات بسيطة متعلقة بالتخرج (ليس مشروعاً رئيسياً). Laravel وMySQL."
+      },
+      "maestro": {
+        "title": "Maestro — متجر آلات موسيقية",
+        "period": "مايو – يونيو 2023",
+        "description": "منصة كاملة مع CRUD على MySQL، مصادقة PHP آمنة، والتحقق من جانب العميل بـ JavaScript."
+      },
+      "civil-registry": {
+        "title": "نظام السجل المدني",
+        "period": "أغسطس 2023",
+        "description": "نظام CRUD آمن لإدارة السجلات المدنية والمصادقة على ASP.NET Web Forms وSQL Server."
+      }
+    }
+  },
+  "contact": {
+    "title": "تواصل معي",
+    "subtitle": "لنتواصل",
+    "subtitleHint": "اختر الطريقة المناسبة لك للتواصل",
+    "description": "جاهز للتعاون على منتجات Laravel وواجهات API وأتمتة العمليات.",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "location": "الموقع",
+    "copy": "نسخ",
+    "map": "الخريطة",
+    "socialTitle": "روابط مهنية",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "footer": {
+    "tagline": "مهندس برمجيات — Laravel · APIs · Automation",
+    "copyright": "© 2026 فادي سمير بطرس."
+  }
+}
