@@ -99,7 +99,7 @@
       "correspondence-management": {
         "title": "Correspondence Management System",
         "period": "2026 · Laravel backend project",
-        "description": "Official correspondence workflow (requests, decisions, circulars, summons) with RBAC, automated serial numbering on approval, frozen records, and public QR verification. Laravel 13 & MySQL."
+        "description": "Official correspondence workflow (requests, decisions, circulars, summons) with RBAC, automated serial numbering on approval, frozen records, and public QR verification. Laravel 12 & MySQL."
       },
       "smart-expense": {
         "title": "Smart Expense Tracker",

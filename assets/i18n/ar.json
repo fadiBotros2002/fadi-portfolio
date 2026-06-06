@@ -99,7 +99,7 @@
       "correspondence-management": {
         "title": "نظام إدارة المراسلات الرسمية",
         "period": "2026 · مشروع Laravel backend",
-        "description": "دورة اعتماد للمراسلات الرسمية (طلبات، قرارات، تعاميم، استدعاءات) مع RBAC، أرقام تسلسلية عند الاعتماد، تجميد السجل، وتحقق عام عبر QR. Laravel 13 وMySQL."
+        "description": "دورة اعتماد للمراسلات الرسمية (طلبات، قرارات، تعاميم، استدعاءات) مع RBAC، أرقام تسلسلية عند الاعتماد، تجميد السجل، وتحقق عام عبر QR. Laravel 12 وMySQL."
       },
       "smart-expense": {
         "title": "Smart Expense Tracker",

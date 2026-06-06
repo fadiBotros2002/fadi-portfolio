@@ -37,7 +37,7 @@ const PROJECTS_CATALOG = [
     {
         id: 'correspondence-management',
         icon: 'fas fa-envelope-open-text',
-        technologies: ['Laravel 13', 'PHP 8.3', 'MySQL', 'Blade', 'Tailwind', 'Alpine.js'],
+        technologies: ['Laravel 12', 'PHP 8.2', 'MySQL', 'Blade', 'Tailwind', 'Alpine.js'],
         links: { rows: [], github: 'https://github.com/fadiBotros2002/cms' },
         featured: false,
         wip: false,
