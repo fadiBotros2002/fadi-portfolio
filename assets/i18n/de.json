@@ -96,6 +96,11 @@
         "description": "Vermittlungsplattform mit KI-gestütztem Lebenslauf, Job-Matching, Kandidatenfilterung für Arbeitgeber und Skill-Tests. Auf LinkedIn vorgestellt.",
         "links": { "video": "Projektvideo (LinkedIn)" }
       },
+      "correspondence-management": {
+        "title": "Korrespondenz-Managementsystem",
+        "period": "2026 · Laravel-Backend-Projekt",
+        "description": "Websystem für offizielle Korrespondenz (Anfragen, Beschlüsse, Rundschreiben, Vorladungen) mit vollständigem Workflow: Erstellen → Prüfen → Freigeben. RBAC für Creator, Checker und Viewer; nebenläufigkeitssichere Seriennummern; unveränderliche Datensätze nach Freigabe; öffentliche Dokumentenprüfung per UUID und QR-Code ohne Login. Datei-Uploads mit Filterung und rollenbasierter Sichtbarkeit."
+      },
       "smart-expense": {
         "title": "Smart Expense Tracker",
         "period": "In Entwicklung · Freelance",

@@ -35,6 +35,15 @@ const PROJECTS_CATALOG = [
         minor: false
     },
     {
+        id: 'correspondence-management',
+        icon: 'fas fa-envelope-open-text',
+        technologies: ['Laravel 13', 'PHP 8.3', 'MySQL', 'Blade', 'Tailwind', 'Alpine.js'],
+        links: { rows: [], github: 'https://github.com/fadiBotros2002/cms' },
+        featured: false,
+        wip: false,
+        minor: false
+    },
+    {
         id: 'smart-expense',
         icon: 'fas fa-wallet',
         technologies: ['Laravel 12', 'MySQL', 'Firebase', 'Queues'],

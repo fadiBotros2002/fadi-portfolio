@@ -96,6 +96,11 @@
         "description": "Employment mediation app with AI-assisted CV building, job matching, employer-side candidate filtering, and skill tests. Shared on LinkedIn.",
         "links": { "video": "Project video (LinkedIn)" }
       },
+      "correspondence-management": {
+        "title": "Correspondence Management System",
+        "period": "2026 · Laravel backend project",
+        "description": "Web system for official correspondence (requests, decisions, circulars, summons) with full lifecycle: create → review → approve. RBAC for Creator, Checker, and Viewer roles; concurrency-safe serial numbering (PREFIX-SUBJECT-DATE-0001); immutable records after approval; public document verification via UUID and QR code without login. File uploads (PDF, images, ZIP) with filtering and role-scoped visibility."
+      },
       "smart-expense": {
         "title": "Smart Expense Tracker",
         "period": "In progress · freelance",
