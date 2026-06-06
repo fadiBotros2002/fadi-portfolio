@@ -99,45 +99,7 @@
       "correspondence-management": {
         "title": "Correspondence Management System",
         "period": "2026 · Laravel backend project",
-        "description": "Web system for managing official correspondence inside institutions — from creation and review to approval and public verification.",
-        "coreTitle": "Core Functionality",
-        "core": [
-          {
-            "title": "Workflow",
-            "text": "Enables users to create official correspondence, upload attachments, and submit them for review."
-          },
-          {
-            "title": "Data Security",
-            "text": "Upon approval, a unique serial number is generated, and the record is frozen permanently to prevent any modification."
-          },
-          {
-            "title": "Public Verification",
-            "text": "Anyone can verify the authenticity of a document via a public link or QR Code."
-          }
-        ],
-        "featuresTitle": "Features",
-        "features": [
-          {
-            "title": "3 Defined Roles",
-            "text": "Creator, Checker, and Viewer (RBAC)."
-          },
-          {
-            "title": "4 Correspondence Types",
-            "text": "Request, Decision, Circular, and Summons."
-          },
-          {
-            "title": "Automated Approval",
-            "text": "Instant generation of secure, sequential serial numbers upon document approval."
-          },
-          {
-            "title": "Guest-Accessible Validation",
-            "text": "Public verification page requiring no login."
-          },
-          {
-            "title": "Data Management",
-            "text": "Advanced filtering, instant search, and seamless pagination."
-          }
-        ]
+        "description": "Official correspondence workflow (requests, decisions, circulars, summons) with RBAC, automated serial numbering on approval, frozen records, and public QR verification. Laravel 13 & MySQL."
       },
       "smart-expense": {
         "title": "Smart Expense Tracker",
