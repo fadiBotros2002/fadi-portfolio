@@ -99,7 +99,45 @@
       "correspondence-management": {
         "title": "Korrespondenz-Managementsystem",
         "period": "2026 · Laravel-Backend-Projekt",
-        "description": "Websystem für offizielle Korrespondenz (Anfragen, Beschlüsse, Rundschreiben, Vorladungen) mit vollständigem Workflow: Erstellen → Prüfen → Freigeben. RBAC für Creator, Checker und Viewer; nebenläufigkeitssichere Seriennummern; unveränderliche Datensätze nach Freigabe; öffentliche Dokumentenprüfung per UUID und QR-Code ohne Login. Datei-Uploads mit Filterung und rollenbasierter Sichtbarkeit."
+        "description": "Websystem zur Verwaltung offizieller Korrespondenz in Organisationen — von Erstellung und Prüfung bis Freigabe und öffentlicher Verifikation.",
+        "coreTitle": "Kernfunktionen",
+        "core": [
+          {
+            "title": "Workflow",
+            "text": "Erstellung offizieller Korrespondenz, Anhänge hochladen und zur Prüfung einreichen."
+          },
+          {
+            "title": "Datensicherheit",
+            "text": "Nach Freigabe wird eine eindeutige Seriennummer vergeben und der Datensatz dauerhaft eingefroren."
+          },
+          {
+            "title": "Öffentliche Verifikation",
+            "text": "Jeder kann die Echtheit eines Dokuments per öffentlichem Link oder QR-Code prüfen."
+          }
+        ],
+        "featuresTitle": "Funktionen",
+        "features": [
+          {
+            "title": "3 definierte Rollen",
+            "text": "Creator, Checker und Viewer (RBAC)."
+          },
+          {
+            "title": "4 Korrespondenztypen",
+            "text": "Anfrage, Beschluss, Rundschreiben und Vorladung."
+          },
+          {
+            "title": "Automatisierte Freigabe",
+            "text": "Sofortige Generierung sicherer Seriennummern bei Dokumentenfreigabe."
+          },
+          {
+            "title": "Gast-Zugang zur Prüfung",
+            "text": "Öffentliche Verifikationsseite ohne Login."
+          },
+          {
+            "title": "Datenverwaltung",
+            "text": "Erweiterte Filter, Sofortsuche und nahtlose Paginierung."
+          }
+        ]
       },
       "smart-expense": {
         "title": "Smart Expense Tracker",

@@ -13,6 +13,35 @@ function renderProjectLinkRows(project) {
         .join('');
 }
 
+function renderProjectDetailSections(copy) {
+    if (!copy.core && !copy.features) return '';
+
+    const renderGroup = (title, items) => {
+        if (!items || !items.length) return '';
+        const list = items
+            .map(
+                (item) => `
+            <li class="project-detail-item">
+                <strong class="project-detail-item__title">${item.title}</strong>
+                <span class="project-detail-item__text">${item.text}</span>
+            </li>`
+            )
+            .join('');
+
+        return `
+            <div class="project-detail-group">
+                <h4 class="project-detail-group__title">${title}</h4>
+                <ul class="project-detail-list">${list}</ul>
+            </div>`;
+    };
+
+    return `
+        <div class="project-details">
+            ${renderGroup(copy.coreTitle, copy.core)}
+            ${renderGroup(copy.featuresTitle, copy.features)}
+        </div>`;
+}
+
 function renderProjects() {
     const projectsGrid = document.getElementById('projectsGrid');
     if (!projectsGrid || !window.I18n.data.projects) return;
@@ -44,8 +73,11 @@ function renderProjects() {
                 ? `<a href="${project.links.github}" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline"><i class="fab fa-github" aria-hidden="true"></i><span>${ui.github}</span></a>`
                 : '';
 
+        const detailSections = renderProjectDetailSections(copy);
+        const detailedClass = project.detailed ? ' project-card--detailed' : '';
+
         return `
-        <div class="project-card ${project.featured ? 'featured' : ''}" data-project-id="${project.id}">
+        <div class="project-card${project.featured ? ' featured' : ''}${detailedClass}" data-project-id="${project.id}">
             <div class="project-image ${hasImage ? '' : 'project-image--placeholder'}">
                 ${imageBlock}
                 ${iconBlock}
@@ -55,6 +87,7 @@ function renderProjects() {
                 <h3>${copy.title || ''}</h3>
                 ${period}
                 <p>${copy.description || ''}</p>
+                ${detailSections}
                 <div class="project-tech">
                     ${project.technologies.map((tech) => `<span class="tech-tag">${tech}</span>`).join('')}
                 </div>

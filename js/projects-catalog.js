@@ -41,7 +41,8 @@ const PROJECTS_CATALOG = [
         links: { rows: [], github: 'https://github.com/fadiBotros2002/cms' },
         featured: false,
         wip: false,
-        minor: false
+        minor: false,
+        detailed: true
     },
     {
         id: 'smart-expense',
