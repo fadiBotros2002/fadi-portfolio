@@ -63,7 +63,7 @@ const PROJECTS_CATALOG = [
         id: 'proxmox-alerts',
         icon: 'fas fa-bell',
         image: 'assets/images/projects/proxmox_telegram_alertSystem-1.png',
-        gallery: ['assets/images/projects/TELEGRAMproxmox_telegram_alertSystem-2.png'],
+        gallery: ['assets/images/projects/TELEGRAMproxmox_telegram_alertSystem-2.png','assets/images/projects/proxmox_telegram_alertSystem-1.png'],
         technologies: ['n8n', 'Proxmox API', 'Telegram'],
         links: { rows: [], github: 'https://github.com/fadiBotros2002' },
         featured: false,
