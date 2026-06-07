@@ -90,9 +90,9 @@ const PROJECTS_CATALOG = [
     {
         id: 'maestro',
         icon: 'fas fa-guitar',
-        image: 'assets/images/projects/maestro',
+        image: 'assets/images/projects/maestro.png',
         gallery: [
-            'assets/images/projects/maestro'
+            'assets/images/projects/maestro.png'
         ],
         technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
         links: { rows: [], github: 'https://github.com/fadiBotros2002' },
