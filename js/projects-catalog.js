@@ -73,6 +73,14 @@ const PROJECTS_CATALOG = [
     {
         id: 'graduation-system',
         icon: 'fas fa-user-graduate',
+        image: 'assets/images/projects/gs/gs-1.png',
+        gallery: [
+            'assets/images/projects/gs/gs-2.png',
+            'assets/images/projects/gs/gs-3.png',
+            'assets/images/projects/gs/gs-4.png',
+            'assets/images/projects/gs/gs-5.png',
+            'assets/images/projects/gs/gs-6.png'
+        ],
         technologies: ['PHP', 'Laravel', 'MySQL'],
         links: { rows: [], github: null },
         featured: false,
