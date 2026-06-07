@@ -35,10 +35,17 @@ const PROJECTS_CATALOG = [
         minor: false
     },
     {
-        id: 'correspondence-management',
+        id: 'tawtheeq',
         icon: 'fas fa-envelope-open-text',
-        technologies: ['Laravel 12', 'PHP 8.2', 'MySQL', 'Blade', 'Tailwind', 'Alpine.js'],
-        links: { rows: [], github: 'https://github.com/fadiBotros2002/cms' },
+        image: 'assets/images/projects/tawtheeq-cover.png',
+        gallery: [
+            'assets/images/projects/tawtheeq-1.png',
+            'assets/images/projects/tawtheeq-2.png',
+            'assets/images/projects/tawtheeq-3.png',
+            'assets/images/projects/tawtheeq-4.png'
+        ],
+        technologies: ['Laravel 12', 'MySQL', 'QR Codes'],
+        links: { rows: [], github: null },
         featured: false,
         wip: false,
         minor: false

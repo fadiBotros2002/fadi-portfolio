@@ -13,6 +13,40 @@ function renderProjectLinkRows(project) {
         .join('');
 }
 
+function renderProjectGallery(project, copy) {
+    const images = Array.isArray(project.gallery) ? project.gallery.filter(Boolean) : [];
+    if (!images.length) return '';
+
+    const title = copy.title || '';
+    return `<div class="project-gallery" role="group" aria-label="${title}">
+        ${images
+            .map(
+                (src, index) =>
+                    `<button type="button" class="project-gallery__thumb${index === 0 ? ' is-active' : ''}" data-src="${src}" aria-label="${title} — ${index + 1}">
+                <img src="${src}" alt="" loading="lazy" onerror="this.closest('button')?.remove()">
+            </button>`
+            )
+            .join('')}
+    </div>`;
+}
+
+function bindProjectGallery() {
+    const projectsGrid = document.getElementById('projectsGrid');
+    if (!projectsGrid) return;
+
+    projectsGrid.querySelectorAll('.project-gallery__thumb').forEach((thumb) => {
+        thumb.addEventListener('click', () => {
+            const card = thumb.closest('.project-card');
+            const mainImg = card && card.querySelector('.project-image > img');
+            if (!mainImg || !thumb.dataset.src) return;
+
+            mainImg.src = thumb.dataset.src;
+            card.querySelectorAll('.project-gallery__thumb').forEach((btn) => btn.classList.remove('is-active'));
+            thumb.classList.add('is-active');
+        });
+    });
+}
+
 function renderProjects() {
     const projectsGrid = document.getElementById('projectsGrid');
     if (!projectsGrid || !window.I18n.data.projects) return;
@@ -29,6 +63,7 @@ function renderProjects() {
         const iconBlock = `<div class="project-icon ${hasImage ? '' : 'project-icon--visible'}"><i class="${project.icon}"></i></div>`;
 
         const period = copy.period ? `<p class="project-period">${copy.period}</p>` : '';
+        const galleryBlock = renderProjectGallery(project, copy);
 
         const badges = [
             project.featured ? `<div class="featured-badge">${ui.featured}</div>` : '',
@@ -43,6 +78,13 @@ function renderProjects() {
             project.links && project.links.github
                 ? `<a href="${project.links.github}" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline"><i class="fab fa-github" aria-hidden="true"></i><span>${ui.github}</span></a>`
                 : '';
+        const linksBlock =
+            rowButtons || githubBtn
+                ? `<div class="project-links project-links--wrap">
+                    ${rowButtons}
+                    ${githubBtn}
+                </div>`
+                : '';
 
         return `
         <div class="project-card ${project.featured ? 'featured' : ''}" data-project-id="${project.id}">
@@ -55,16 +97,16 @@ function renderProjects() {
                 <h3>${copy.title || ''}</h3>
                 ${period}
                 <p>${copy.description || ''}</p>
+                ${galleryBlock}
                 <div class="project-tech">
                     ${project.technologies.map((tech) => `<span class="tech-tag">${tech}</span>`).join('')}
                 </div>
-                <div class="project-links project-links--wrap">
-                    ${rowButtons}
-                    ${githubBtn}
-                </div>
+                ${linksBlock}
             </div>
         </div>`;
     }).join('');
+
+    bindProjectGallery();
 }
 
 window.addProject = function (newProject) {

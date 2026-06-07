@@ -96,10 +96,10 @@
         "description": "Vermittlungsplattform mit KI-gestütztem Lebenslauf, Job-Matching, Kandidatenfilterung für Arbeitgeber und Skill-Tests. Auf LinkedIn vorgestellt.",
         "links": { "video": "Projektvideo (LinkedIn)" }
       },
-      "correspondence-management": {
-        "title": "Korrespondenz-Managementsystem",
-        "period": "2026 · Laravel-Backend-Projekt",
-        "description": "Workflow für offizielle Korrespondenz (Anfragen, Beschlüsse, Rundschreiben, Vorladungen) mit RBAC, Seriennummern bei Freigabe, eingefrorenen Datensätzen und öffentlicher QR-Verifikation. Laravel 12 & MySQL."
+      "tawtheeq": {
+        "title": "Tawtheeq",
+        "period": "Backend Developer · 2026",
+        "description": "Elektronisches Archiv- und Verifikationssystem für ein- und ausgehende Vorgänge. Sichere Architektur verschlüsselt und verbirgt Cloud-Speicherpfade; gedruckte Dokumente werden über dynamische Links und QR-Codes verifiziert."
       },
       "smart-expense": {
         "title": "Smart Expense Tracker",

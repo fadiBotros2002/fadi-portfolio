@@ -96,10 +96,10 @@
         "description": "منصة وساطة توظيف مع ميزات AI لبناء السيرة واقتراح الوظائف، وتصفية المرشحين للشركات، واختبارات مهارات. تم العرض على LinkedIn.",
         "links": { "video": "فيديو المشروع (LinkedIn)" }
       },
-      "correspondence-management": {
-        "title": "نظام إدارة المراسلات الرسمية",
-        "period": "2026 · مشروع Laravel backend",
-        "description": "دورة اعتماد للمراسلات الرسمية (طلبات، قرارات، تعاميم، استدعاءات) مع RBAC، أرقام تسلسلية عند الاعتماد، تجميد السجل، وتحقق عام عبر QR. Laravel 12 وMySQL."
+      "tawtheeq": {
+        "title": "Tawtheeq",
+        "period": "Backend Developer · 2026",
+        "description": "نظام ديوان وأرشفة إلكترونية (Document Archiving & Verification System) لإدارة المعاملات الصادرة والواردة. بنية آمنة تشفّر وتخفي مسارات التخزين السحابي الفعلية، مع توثيق الوثائق المطبوعة عبر روابط ديناميكية وQR Codes."
       },
       "smart-expense": {
         "title": "Smart Expense Tracker",

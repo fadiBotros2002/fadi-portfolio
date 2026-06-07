@@ -96,10 +96,10 @@
         "description": "Employment mediation app with AI-assisted CV building, job matching, employer-side candidate filtering, and skill tests. Shared on LinkedIn.",
         "links": { "video": "Project video (LinkedIn)" }
       },
-      "correspondence-management": {
-        "title": "Correspondence Management System",
-        "period": "2026 · Laravel backend project",
-        "description": "Official correspondence workflow (requests, decisions, circulars, summons) with RBAC, automated serial numbering on approval, frozen records, and public QR verification. Laravel 12 & MySQL."
+      "tawtheeq": {
+        "title": "Tawtheeq",
+        "period": "Backend Developer · 2026",
+        "description": "Document archiving and verification system for outgoing and incoming correspondence. Secure architecture encrypts and obscures actual cloud storage paths, with printed document verification via dynamic links and QR codes."
       },
       "smart-expense": {
         "title": "Smart Expense Tracker",
