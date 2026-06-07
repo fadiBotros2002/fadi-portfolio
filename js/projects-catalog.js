@@ -44,7 +44,7 @@ const PROJECTS_CATALOG = [
             'assets/images/projects/tawtheeq-3.png',
             'assets/images/projects/tawtheeq-4.png'
         ],
-        technologies: ['Laravel 12', 'MySQL', 'QR Codes'],
+        technologies: ['Laravel 12', 'MySQL', 'QR Codes' , 'Blade'],
         links: { rows: [], github: null },
         featured: false,
         wip: false,
@@ -62,6 +62,8 @@ const PROJECTS_CATALOG = [
     {
         id: 'proxmox-alerts',
         icon: 'fas fa-bell',
+        image: 'assets/images/projects/proxmox_telegram_alertSystem-1.png',
+        gallery: ['assets/images/projects/TELEGRAMproxmox_telegram_alertSystem-2.png'],
         technologies: ['n8n', 'Proxmox API', 'Telegram'],
         links: { rows: [], github: 'https://github.com/fadiBotros2002' },
         featured: false,
