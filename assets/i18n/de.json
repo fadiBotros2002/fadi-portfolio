@@ -36,7 +36,7 @@
     "factLangValue": "Arabisch · Englisch · Deutsch",
     "h1": "CI/CD mit GitHub Actions · Docker · Linux (Ubuntu)",
     "h2": "Virtualisierung: Proxmox & VMware ESXi",
-    "h3": "MySQL (Indizierung & Tuning), SQL Server und JMeter-Lasttests"
+    "h3": "MySQL & PostgreSQL, SQL Server, JMeter-Lasttests und automatisierte Tests (PHPUnit · Playwright)"
   },
   "experience": {
     "title": "Berufserfahrung",
@@ -69,7 +69,9 @@
     "g4Title": "Tools & Konzepte",
     "g4Hint": "Vom Design bis zum Release",
     "g5Title": "Server-Deployment",
-    "g5Hint": "Hosting-Plattformen, die ich genutzt habe"
+    "g5Hint": "Hosting-Plattformen, die ich genutzt habe",
+    "g6Title": "Tests & Qualität",
+    "g6Hint": "Automatisierte Tests von Unit bis Browser"
   },
   "projects": {
     "title": "Ausgewählte Projekte",

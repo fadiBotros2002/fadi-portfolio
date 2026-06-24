@@ -36,7 +36,7 @@
     "factLangValue": "عربية · إنجليزية · ألمانية",
     "h1": "CI/CD عبر GitHub Actions · Docker · Linux (Ubuntu)",
     "h2": "افتراضية: Proxmox وVMware ESXi",
-    "h3": "MySQL (فهرسة وتحسين) وSQL Server واختبارات تحميل بـ JMeter"
+    "h3": "MySQL وPostgreSQL وSQL Server واختبارات تحميل بـ JMeter واختبارات آلية (PHPUnit · Playwright)"
   },
   "experience": {
     "title": "الخبرة العملية",
@@ -69,7 +69,9 @@
     "g4Title": "أدوات ومفاهيم",
     "g4Hint": "من التصميم إلى الإطلاق",
     "g5Title": "نشر الخوادم",
-    "g5Hint": "بيئات استضافة عملت عليها"
+    "g5Hint": "بيئات استضافة عملت عليها",
+    "g6Title": "الاختبارات والجودة",
+    "g6Hint": "اختبارات آلية من الوحدة إلى المتصفح"
   },
   "projects": {
     "title": "مشاريع مختارة",
