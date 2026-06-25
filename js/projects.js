@@ -53,7 +53,7 @@ function renderProjects() {
 
     const ui = window.I18n.data.projects.ui;
 
-    projectsGrid.innerHTML = PROJECTS_CATALOG.map((project) => {
+    projectsGrid.innerHTML = PROJECTS_CATALOG.filter((project) => !project.hidden).map((project) => {
         const copy = window.I18n.data.projects.items[project.id] || {};
         const hasImage = Boolean(project.image);
         const imageBlock = hasImage

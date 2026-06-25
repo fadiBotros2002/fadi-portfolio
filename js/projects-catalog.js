@@ -48,7 +48,8 @@ const PROJECTS_CATALOG = [
         links: { rows: [], github: null },
         featured: false,
         wip: false,
-        minor: false
+        minor: false,
+        hidden: true
     },
     {
         id: 'smart-expense',
