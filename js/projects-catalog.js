@@ -49,7 +49,7 @@ const PROJECTS_CATALOG = [
         featured: false,
         wip: false,
         minor: false,
-        hidden: true
+        //hidden: true
     },
     {
         id: 'smart-expense',
