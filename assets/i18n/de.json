@@ -9,7 +9,6 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "kicker": "Fadi Sameer Botros · Damaskus, Syrien (offen für Remote)",
     "title": "Backend-Ingenieur für ERP-Workflows und Produktions-APIs",
     "subtitle": "Backend-Softwareingenieur · Odoo-Entwickler",
     "description": "Ich entwerfe Laravel-/Odoo-Backends, die Betriebsabläufe automatisieren — Lager, POS und Dokumentensysteme — mit RBAC, Queues und produktionsreifen API-Integrationen.",

@@ -1759,14 +1759,7 @@ section {
     max-width: 40rem;
 }
 
-.hero-kicker {
-    font-size: var(--font-size-sm);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: rgba(241, 245, 249, 0.95);
-    margin-bottom: var(--spacing-3);
-    font-weight: 600;
-}
+
 
 .hero-chips {
     display: flex;
@@ -2454,10 +2447,6 @@ section {
         justify-content: center;
     }
 
-    .hero-kicker {
-        text-align: center;
-        font-size: var(--font-size-xs);
-    }
 
     .hero-text {
         text-align: center;
