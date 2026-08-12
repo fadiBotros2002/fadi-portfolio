@@ -57,6 +57,14 @@ CV rule: projects on the site but missing from the CV may stay; do not delete so
 3. Wire images; for Odoo prefer `cover.png` + numbered gallery files (no spaces in filenames).
 4. Add `specs/showcase/{id}.md` and list it in `specs/showcase/README.md`.
 5. Hero project count updates automatically (non-hidden catalog length).
+6. Deep link for CV: `https://YOUR-SITE/#project-{id}` (card gets `id="project-{id}"`).
+
+## CV deep links
+
+Pattern: `{portfolio-origin}/#project-{catalog-id}`
+
+Examples: `#project-odoo-food-wms`, `#project-odoo-kds`, `#project-visionmate`.  
+Section-only: `#odoo-projects`, `#projects`.
 
 ## Checklist: hide without deleting
 

@@ -79,7 +79,7 @@ function projectCardHtml(project, ui) {
             : '';
 
     return `
-        <div class="project-card ${project.featured ? 'featured' : ''}" data-project-id="${project.id}">
+        <div class="project-card ${project.featured ? 'featured' : ''}" id="project-${project.id}" data-project-id="${project.id}">
             <div class="project-image ${hasImage ? '' : 'project-image--placeholder'}">
                 ${imageBlock}
                 ${iconBlock}
@@ -96,6 +96,19 @@ function projectCardHtml(project, ui) {
                 ${linksBlock}
             </div>
         </div>`;
+}
+
+/** CV / share deep links: #project-{catalog-id} */
+function scrollToProjectHash() {
+    const raw = window.location.hash || '';
+    if (!raw.startsWith('#project-')) return;
+
+    const el = document.getElementById(raw.slice(1));
+    if (!el) return;
+
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    el.classList.add('project-card--focus');
+    window.setTimeout(() => el.classList.remove('project-card--focus'), 2200);
 }
 
 function visibleProjectsByGroup(group) {
@@ -119,6 +132,18 @@ function renderProjects() {
     const ui = window.I18n.data.projects.ui;
     fillProjectsGrid('odooProjectsGrid', 'odoo', ui);
     fillProjectsGrid('projectsGrid', 'software', ui);
+
+    // Cards are created after async component load — re-apply hash after paint
+    requestAnimationFrame(() => scrollToProjectHash());
+}
+
+if (!window.__projectHashBound) {
+    window.__projectHashBound = true;
+    window.addEventListener('hashchange', () => {
+        if ((window.location.hash || '').startsWith('#project-')) {
+            scrollToProjectHash();
+        }
+    });
 }
 
 window.addProject = function (newProject) {

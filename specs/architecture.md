@@ -45,6 +45,23 @@ Static shell: `index.html` loads HTML fragments into placeholders, then JS appli
 - Markup: `components/projects.html` — `#odooProjectsGrid` + `#projectsGrid`
 - Primary CTA in hero: `#odoo-projects`
 - Images: if `img` fails → hidden + icon fallback (`project-icon--visible`)
+- Each card: `id="project-{catalog-id}"` (e.g. `#project-odoo-food-wms`)
+- Deep link: after `renderProjects()`, `scrollToProjectHash()` scrolls + brief `.project-card--focus`
+
+### CV deep-link examples (Netlify base)
+
+| Project | URL hash |
+|---------|----------|
+| Food WMS | `/#project-odoo-food-wms` |
+| Odoo KDS | `/#project-odoo-kds` |
+| VisionMate | `/#project-visionmate` |
+| Wazefni | `/#project-wazefni` |
+| Tawtheeq | `/#project-tawtheeq` |
+| Smart Expense | `/#project-smart-expense` |
+| Graduation | `/#project-graduation-system` |
+| Proxmox alerts | `/#project-proxmox-alerts` |
+| Civil registry | `/#project-civil-registry` |
+| All Odoo | `/#odoo-projects` |
 
 ## Legacy / unused for the live page
 
