@@ -492,16 +492,16 @@ class PortfolioApp {
     }
     
     setupContactActions() {
-        // Add copy to clipboard functionality
         window.copyToClipboard = (text) => {
+            const copied = window.I18n.t('contact.copied') || 'Copied to clipboard';
+            const failed = window.I18n.t('contact.copyFailed') || 'Copy failed — please copy manually';
             navigator.clipboard.writeText(text).then(() => {
-                this.showNotification('تم النسخ إلى الحافظة!', 'success');
+                this.showNotification(copied, 'success');
             }).catch(() => {
-                this.showNotification('فشل النسخ، يرجى المحاولة يدوياً', 'error');
+                this.showNotification(failed, 'error');
             });
         };
-        
-        // Add map functionality
+
         window.openMap = () => {
             window.open('https://maps.google.com/?q=Damascus,Syria', '_blank', 'noopener,noreferrer');
         };

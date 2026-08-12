@@ -1,6 +1,6 @@
 # Site architecture
 
-Static shell: `index.html` loads HTML fragments into placeholders, then JS applies i18n and renders projects.
+Static shell: `index.html` loads HTML fragments **in parallel** (`Promise.all`) into placeholders, then JS applies i18n and renders projects.
 
 ## Live entrypoints (use these)
 
@@ -20,8 +20,8 @@ Static shell: `index.html` loads HTML fragments into placeholders, then JS appli
 
 ## Page sections (CV-aligned order)
 
-1. **Hero** — Backend · Odoo positioning; chips; stats; CTAs (incl. LinkedIn button)
-2. **About** — summary + glance card
+1. **Hero** — Backend · Odoo positioning; chips; stats; **two CTAs** (Projects → `#odoo-projects`, Contact → `#contact`)
+2. **About** — summary + glance card (LinkedIn / GitHub)
 3. **Experience** — ASAS → Freelance → SAMWare → education strip
 4. **Skills** — Backend/APIs, ERP & automation (Odoo), Frontend, DBs, DevOps, Testing, Tools
 5. **Projects** — two groups: Odoo ERP (`#odoo-projects`) then Software & automation
@@ -30,7 +30,7 @@ Static shell: `index.html` loads HTML fragments into placeholders, then JS appli
 ## Navigation
 
 `components/navigation.html`: Home, Profile, Experience, Skills, Projects, Contact.  
-**No LinkedIn item in the top bar** — LinkedIn stays on hero buttons, about card, and contact only.
+**No LinkedIn item in the top bar** — LinkedIn stays on the about card and contact only (not in the hero CTA row).
 
 ## Hero stats
 
@@ -79,7 +79,7 @@ Prefer not to extend unless migrating away from `js/app.js`:
 ## Runtime flow
 
 1. Early script sets `data-theme` + `lang`/`dir` from `localStorage`.
-2. Component HTML fetched into placeholders.
+2. Component HTML fetched **in parallel** (`Promise.all`) into placeholders.
 3. `PortfolioApp` → `I18n.load(lang)` → `applyTranslations()` → `renderProjects()` + stats counter.
 4. Language change: reload locale JSON, re-apply DOM + re-render projects.
 

@@ -10,9 +10,9 @@
   },
   "hero": {
     "kicker": "Fadi Sameer Botros · Damaskus, Syrien (offen für Remote)",
-    "title": "Hallo, ich bin Fadi Sameer Botros",
+    "title": "Backend-Ingenieur für ERP-Workflows und Produktions-APIs",
     "subtitle": "Backend-Softwareingenieur · Odoo-Entwickler",
-    "description": "PHP/Laravel und individuelle Odoo-ERP-Lösungen — skalierbare REST-APIs, FilamentPHP-Unternehmensanwendungen und Workflow-Automatisierung mit n8n.",
+    "description": "Ich entwerfe Laravel-/Odoo-Backends, die Betriebsabläufe automatisieren — Lager, POS und Dokumentensysteme — mit RBAC, Queues und produktionsreifen API-Integrationen.",
     "viewProjects": "Projekte ansehen",
     "contactMe": "Kontakt",
     "linkedin": "LinkedIn-Profil",
@@ -42,11 +42,11 @@
     "lead": "Backend, Odoo-ERP und Infrastruktur-Automatisierung.",
     "asas": {
       "role": "Backend- & Odoo-ERP-Entwickler",
-      "b1": "Skalierbare Backends, REST-APIs und relationale Datenbanken mit PHP, Laravel und MySQL.",
-      "b2": "Sicheres Cloud-File-Management und elektronisches Dokumentenmanagement (Archivierung & Zugriffskontrolle).",
-      "b3": "Full-Stack-Beschaffungssystem: Einkaufsprozesse, Angebote und Rechnungsstellung.",
-      "b4": "Individuelle Odoo-19-Module — Echtzeit-Kitchen-Display-System (KDS) mit OWL und Odoo-Bus.",
-      "b5": "POS-Belege (Thermo & A4-PDF), Multi-Company, Loyalty über REST-APIs mit Retry."
+      "b1": "Verantwortlich für Laravel-API- und MySQL-Schichten interner Geschäftssysteme — Beschaffung, Dokumentenkontrolle und Multi-Company-POS-Integrationen.",
+      "b2": "Cloud-Dateimanagement und elektronische Dokumentenarchivierung mit Zugriffskontrolle für ein-/ausgehende Korrespondenz geliefert.",
+      "b3": "Full-Stack-Beschaffungssystem ausgeliefert: Einkaufsprozesse, Angebote und Rechnungsstellung end-to-end.",
+      "b4": "Individuelle Odoo-19-Module für produktive Restaurantabläufe — Echtzeit-Kitchen-Display (OWL + Odoo-Bus) für Live-Auftragsrouting.",
+      "b5": "Multi-Company-POS um Thermo-/A4-Belege und Loyalty-REST-APIs mit automatischem Retry bei instabilen Verbindungen erweitert."
     },
     "freelance": {
       "role": "Freelance-Softwareentwickler",
@@ -105,7 +105,7 @@
       "odoo-kds": {
         "title": "Odoo KDS & POS-Anpassungen",
         "period": "ASAS · 2026",
-        "description": "Echtzeit-Kitchen-Display mit OWL und Odoo-Bus für Live-Auftragsrouting. POS-Belege (Thermo & A4), Multi-Company und Loyalty über REST mit automatischem Retry."
+        "description": "Individuelles Odoo-19-KDS für produktive Küchen: Live-Auftragsrouting über Odoo-Bus + OWL-UI; POS Thermo-/A4-Belege; Multi-Company-Loyalty über REST mit Retry."
       },
       "visionmate": {
         "title": "VisionMate",
@@ -159,6 +159,8 @@
     "location": "Standort",
     "locationValue": "Damaskus, Syrien",
     "copy": "Kopieren",
+    "copied": "In die Zwischenablage kopiert",
+    "copyFailed": "Kopieren fehlgeschlagen — bitte manuell kopieren",
     "map": "Karte",
     "socialTitle": "Berufliche Links",
     "social": {

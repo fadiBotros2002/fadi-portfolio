@@ -9,7 +9,9 @@
 
 ## What it is
 
-Custom Odoo 19 at ASAS: real-time Kitchen Display (OWL + Odoo bus), POS receipts (thermal & A4 PDF), multi-company, loyalty via REST with retry.
+Custom Odoo 19 at ASAS for **production kitchen floors**: live order routing (OWL + Odoo bus), POS receipts (thermal & A4 PDF), multi-company loyalty via REST with retry.
+
+i18n copy emphasizes ownership and production scope (`projects.items.odoo-kds.description`); experience bullets `experience.asas.b4` / `b5` stay aligned.
 
 ## Portfolio wiring
 

@@ -37,7 +37,7 @@ Do **not** leave specs for “later”. Incomplete specs = incomplete task.
 2. Keep all three locales in sync for any new/changed keys.
 3. Prefer `hidden: true` over deleting private project data.
 4. Do not re-add **Maestro**.
-5. Do not add LinkedIn to the top nav (hero/contact/about only).
+5. Do not add LinkedIn to the top nav (about card and contact only; hero uses Projects + Contact CTAs).
 6. Hero project count is computed from non-hidden catalog entries (`data-stat="catalog-count"`).
 7. Odoo screenshots: `assets/images/projects/odoo/{food-wms,kds}/` with `cover.png` + numbered files.
 8. CV deep links: prefer `/p/{catalog-id}` (Netlify rewrite); also `?project=` and legacy `#project-`.

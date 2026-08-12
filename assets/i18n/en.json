@@ -10,9 +10,9 @@
   },
   "hero": {
     "kicker": "Fadi Sameer Botros · Damascus, Syria (Open to remote)",
-    "title": "Hello, I'm Fadi Sameer Botros",
+    "title": "Backend engineer building ERP workflows and production APIs",
     "subtitle": "Backend Software Engineer · Odoo Developer",
-    "description": "PHP/Laravel and custom Odoo ERP solutions — scalable REST APIs, FilamentPHP enterprise apps, and business workflow automation with n8n.",
+    "description": "I design Laravel/Odoo backends that automate ops workflows — inventory, POS, and document systems — with RBAC, queues, and API integrations built for production use.",
     "viewProjects": "View projects",
     "contactMe": "Contact me",
     "linkedin": "LinkedIn profile",
@@ -42,11 +42,11 @@
     "lead": "Backend, Odoo ERP, and infrastructure automation.",
     "asas": {
       "role": "Backend & Odoo ERP Developer",
-      "b1": "Developed scalable backends, RESTful APIs, and relational databases with PHP, Laravel, and MySQL.",
-      "b2": "Built secure cloud file management and electronic document management (archiving & access control).",
-      "b3": "Engineered a full-stack procurement system: purchase workflows, quotations, and invoicing.",
-      "b4": "Custom Odoo 19 modules — real-time Kitchen Display System (KDS) with OWL and Odoo bus.",
-      "b5": "POS receipts (thermal & A4 PDF), multi-company setup, loyalty via REST APIs with retry."
+      "b1": "Owned Laravel API and MySQL layers for internal business systems — procurement, document control, and multi-company POS integrations.",
+      "b2": "Delivered cloud file management and electronic document archiving with access control for outgoing/incoming correspondence.",
+      "b3": "Shipped a full-stack procurement system covering purchase workflows, quotations, and invoicing end to end.",
+      "b4": "Built custom Odoo 19 modules for production restaurant operations — real-time Kitchen Display (OWL + Odoo bus) for live order routing.",
+      "b5": "Extended multi-company POS with thermal/A4 receipts and loyalty REST APIs with automated retry for unreliable links."
     },
     "freelance": {
       "role": "Freelance software developer",
@@ -105,7 +105,7 @@
       "odoo-kds": {
         "title": "Odoo KDS & POS customizations",
         "period": "ASAS · 2026",
-        "description": "Real-time Kitchen Display System with OWL and Odoo bus for live order routing. POS receipts (thermal & A4 PDF), multi-company architecture, and loyalty via REST APIs with automated retry."
+        "description": "Custom Odoo 19 KDS for production kitchen floors: live order routing over Odoo bus + OWL UI; POS thermal/A4 receipts; multi-company loyalty via REST with retry."
       },
       "visionmate": {
         "title": "VisionMate",
@@ -159,6 +159,8 @@
     "location": "Location",
     "locationValue": "Damascus, Syria",
     "copy": "Copy",
+    "copied": "Copied to clipboard",
+    "copyFailed": "Copy failed — please copy manually",
     "map": "Map",
     "socialTitle": "Professional links",
     "social": {

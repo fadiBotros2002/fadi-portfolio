@@ -4,6 +4,15 @@
  *  Legacy:   #project-{catalog-id}
  */
 
+function escapeHtml(value) {
+    return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
 function getDeepLinkedProjectId() {
     const pathMatch = window.location.pathname.match(/\/p\/([^/]+)\/?$/);
     if (pathMatch) {
@@ -83,10 +92,11 @@ function renderProjectLinkRows(project) {
     return rows
         .filter((r) => r && r.href)
         .map((row) => {
-            const label = window.I18n.t(`${base}.${row.labelKey}`);
-            const icon = row.icon || 'fab fa-linkedin';
-            const extra = row.btnClass ? ` ${row.btnClass}` : ' btn-small btn-linkedin';
-            return `<a href="${row.href}" target="_blank" rel="noopener noreferrer" class="btn${extra}"><i class="${icon}" aria-hidden="true"></i><span>${label}</span></a>`;
+            const label = escapeHtml(window.I18n.t(`${base}.${row.labelKey}`));
+            const href = escapeHtml(row.href);
+            const icon = escapeHtml(row.icon || 'fab fa-linkedin');
+            const extra = row.btnClass ? ` ${escapeHtml(row.btnClass)}` : ' btn-small btn-linkedin';
+            return `<a href="${href}" target="_blank" rel="noopener noreferrer" class="btn${extra}"><i class="${icon}" aria-hidden="true"></i><span>${label}</span></a>`;
         })
         .join('');
 }
@@ -95,13 +105,13 @@ function renderProjectGallery(project, copy) {
     const images = Array.isArray(project.gallery) ? project.gallery.filter(Boolean) : [];
     if (!images.length) return '';
 
-    const title = copy.title || '';
+    const title = escapeHtml(copy.title || '');
     return `<div class="project-gallery" role="group" aria-label="${title}">
         ${images
             .map(
                 (src, index) =>
-                    `<button type="button" class="project-gallery__thumb${index === 0 ? ' is-active' : ''}" data-src="${src}" aria-label="${title} — ${index + 1}">
-                <img src="${src}" alt="" loading="lazy" onerror="this.closest('button')?.remove()">
+                    `<button type="button" class="project-gallery__thumb${index === 0 ? ' is-active' : ''}" data-src="${escapeHtml(src)}" aria-label="${title} — ${index + 1}">
+                <img src="${escapeHtml(src)}" alt="" loading="lazy" onerror="this.closest('button')?.remove()">
             </button>`
             )
             .join('')}
@@ -125,20 +135,24 @@ function bindProjectGallery(root) {
 
 function projectCardHtml(project, ui) {
     const copy = window.I18n.data.projects.items[project.id] || {};
+    const title = escapeHtml(copy.title || '');
+    const periodText = escapeHtml(copy.period || '');
+    const description = escapeHtml(copy.description || '');
+    const projectId = escapeHtml(project.id);
     const hasImage = Boolean(project.image);
     const imageBlock = hasImage
-        ? `<img src="${project.image}" alt="${copy.title || ''}" onerror="this.style.display='none'; this.nextElementSibling.classList.add('project-icon--visible');">`
+        ? `<img src="${escapeHtml(project.image)}" alt="${title}" onerror="this.style.display='none'; this.nextElementSibling.classList.add('project-icon--visible');">`
         : '';
 
-    const iconBlock = `<div class="project-icon ${hasImage ? '' : 'project-icon--visible'}"><i class="${project.icon}"></i></div>`;
+    const iconBlock = `<div class="project-icon ${hasImage ? '' : 'project-icon--visible'}"><i class="${escapeHtml(project.icon)}"></i></div>`;
 
-    const period = copy.period ? `<p class="project-period">${copy.period}</p>` : '';
+    const period = periodText ? `<p class="project-period">${periodText}</p>` : '';
     const galleryBlock = renderProjectGallery(project, copy);
 
     const badges = [
-        project.featured ? `<div class="featured-badge">${ui.featured}</div>` : '',
-        project.wip ? `<div class="wip-badge">${ui.wip}</div>` : '',
-        project.minor ? `<div class="minor-badge">${ui.minorStudent}</div>` : ''
+        project.featured ? `<div class="featured-badge">${escapeHtml(ui.featured)}</div>` : '',
+        project.wip ? `<div class="wip-badge">${escapeHtml(ui.wip)}</div>` : '',
+        project.minor ? `<div class="minor-badge">${escapeHtml(ui.minorStudent)}</div>` : ''
     ]
         .filter(Boolean)
         .join('');
@@ -146,7 +160,7 @@ function projectCardHtml(project, ui) {
     const rowButtons = renderProjectLinkRows(project);
     const githubBtn =
         project.links && project.links.github
-            ? `<a href="${project.links.github}" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline"><i class="fab fa-github" aria-hidden="true"></i><span>${ui.github}</span></a>`
+            ? `<a href="${escapeHtml(project.links.github)}" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline"><i class="fab fa-github" aria-hidden="true"></i><span>${escapeHtml(ui.github)}</span></a>`
             : '';
     const linksBlock =
         rowButtons || githubBtn
@@ -157,19 +171,19 @@ function projectCardHtml(project, ui) {
             : '';
 
     return `
-        <div class="project-card ${project.featured ? 'featured' : ''}" id="project-${project.id}" data-project-id="${project.id}">
+        <div class="project-card ${project.featured ? 'featured' : ''}" id="project-${projectId}" data-project-id="${projectId}">
             <div class="project-image ${hasImage ? '' : 'project-image--placeholder'}">
                 ${imageBlock}
                 ${iconBlock}
                 ${badges}
             </div>
             <div class="project-content">
-                <h3>${copy.title || ''}</h3>
+                <h3>${title}</h3>
                 ${period}
-                <p>${copy.description || ''}</p>
+                <p>${description}</p>
                 ${galleryBlock}
                 <div class="project-tech">
-                    ${project.technologies.map((tech) => `<span class="tech-tag">${tech}</span>`).join('')}
+                    ${project.technologies.map((tech) => `<span class="tech-tag">${escapeHtml(tech)}</span>`).join('')}
                 </div>
                 ${linksBlock}
             </div>

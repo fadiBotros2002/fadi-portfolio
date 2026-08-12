@@ -71,12 +71,8 @@
     <script src="/js/projects.js"></script>
     <script src="/js/app.js"></script>
     <script>
-        console.log('HTML script tag loaded');
-        
-        // Load components
         async function loadComponents() {
             try {
-                console.log('Starting to load components...');
                 const components = [
                     { id: 'navigation', file: '/components/navigation.html' },
                     { id: 'hero', file: '/components/hero.html' },
@@ -87,23 +83,23 @@
                     { id: 'contact', file: '/components/contact.html' },
                     { id: 'footer', file: '/components/footer.html' }
                 ];
-                
-                for (const component of components) {
-                    console.log(`Loading component: ${component.file}`);
-                    const response = await fetch(component.file);
-                    if (!response.ok) {
-                        throw new Error(`Failed to load ${component.file}: ${response.status}`);
-                    }
-                    const html = await response.text();
-                    const element = document.getElementById(component.id);
-                    if (element) {
-                        element.innerHTML = html;
-                        console.log(`Successfully loaded ${component.file}`);
-                    } else {
-                        console.error(`Element with id ${component.id} not found`);
-                    }
-                }
-                
+
+                await Promise.all(
+                    components.map(async ({ id, file }) => {
+                        const response = await fetch(file);
+                        if (!response.ok) {
+                            throw new Error(`Failed to load ${file}: ${response.status}`);
+                        }
+                        const html = await response.text();
+                        const element = document.getElementById(id);
+                        if (element) {
+                            element.innerHTML = html;
+                        } else {
+                            console.error(`Element with id ${id} not found`);
+                        }
+                    })
+                );
+
                 if (window.PortfolioApp) {
                     window.portfolioAppInstance = new PortfolioApp();
                     await window.portfolioAppInstance.ready;
@@ -114,12 +110,8 @@
                 console.error('Error loading components:', error);
             }
         }
-        
-        // Load components when DOM is ready
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOM Content Loaded');
-            loadComponents();
-        });
+
+        document.addEventListener('DOMContentLoaded', loadComponents);
     </script>
 </body>
 </html>
