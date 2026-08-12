@@ -3,6 +3,7 @@
 | | |
 |--|--|
 | Catalog id | `wazefni` |
+| group | `software` |
 | Role on site | Featured highlight |
 | Period | Oct 2024 – Jan 2025 · University |
 | Stack (tags) | Laravel, MySQL, Blade, FilamentPHP, JMeter, AI |

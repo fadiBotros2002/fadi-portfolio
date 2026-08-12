@@ -3,6 +3,7 @@
 | | |
 |--|--|
 | Catalog id | `visionmate` |
+| group | `software` |
 | Role on site | Featured highlight |
 | Period | Feb–Jun 2025 · Capstone |
 | Stack (tags) | Laravel, React, FilamentPHP, MySQL, Stripe, AI |

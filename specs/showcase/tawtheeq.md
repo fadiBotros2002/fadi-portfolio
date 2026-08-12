@@ -3,6 +3,7 @@
 | | |
 |--|--|
 | Catalog id | `tawtheeq` |
+| group | `software` |
 | Role on site | Client / private-style showcase (screenshots) |
 | Period | Backend Developer · 2026 |
 | Stack (tags) | Laravel 12, MySQL, QR Codes, Blade |

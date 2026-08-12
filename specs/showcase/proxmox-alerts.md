@@ -3,6 +3,7 @@
 | | |
 |--|--|
 | Catalog id | `proxmox-alerts` |
+| group | `software` |
 | Role on site | Work / automation sample (SAMWare) |
 | Period | SAMWare-Cs · 2025 |
 | Stack (tags) | n8n, Proxmox API, Telegram |

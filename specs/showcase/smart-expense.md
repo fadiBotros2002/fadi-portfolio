@@ -3,6 +3,7 @@
 | | |
 |--|--|
 | Catalog id | `smart-expense` |
+| group | `software` |
 | Role on site | Freelance Laravel sample |
 | Period | Feb–Apr 2026 |
 | Stack (tags) | Laravel 12, MySQL, Firebase, Queues |

@@ -9,14 +9,18 @@
 
 ## What it is
 
-Odoo 19 Community setup for food distribution: Inventory, Purchase, Sales, Contacts; internal warehouse locations; procurement/sales cycles; Lots/traceability; stock movement reports.
+Odoo 19 Community for food distribution: Inventory, Purchase, Sales, Contacts; internal warehouse locations; procurement/sales cycles; Lots/traceability; stock reports.
 
 ## Portfolio wiring
 
-- Images: `assets/images/projects/odoo/food-wms/` (see folder README).
+| Path | Role |
+|------|------|
+| `assets/images/projects/odoo/food-wms/cover.png` | Main card (locations) |
+| `1.png` … `5.png` | Gallery |
+
 - No public GitHub.
 - Flags: `featured: true`, `group: 'odoo'`.
 
 ## Edit tips
 
-Add screenshots with the expected filenames; update i18n `projects.items.odoo-food-wms` in en/ar/de.
+Keep filenames without spaces. Update i18n `projects.items.odoo-food-wms` in en/ar/de together.

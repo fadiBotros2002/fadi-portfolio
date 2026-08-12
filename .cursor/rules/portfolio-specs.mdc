@@ -1,21 +1,43 @@
 ---
-description: Read portfolio specs before editing site structure, projects, or i18n
+description: Keep specs/ in sync with every portfolio change; read specs before editing
 alwaysApply: true
 ---
 
-# Portfolio specs
+# Portfolio specs — always current
 
-Before changing projects, i18n, components, or architecture, read the relevant files under `specs/`:
+`specs/` is part of the product. Treat it like code: **every change that affects structure, projects, i18n, nav, hero, or sections must update the matching spec in the same turn.**
 
-- `specs/architecture.md` — live vs legacy entrypoints
-- `specs/editing-projects.md` — catalog + i18n split, hide flag, add checklist
+## Before editing
+
+Read the relevant files under `specs/`:
+
+- `specs/architecture.md` — sections, nav, hero stats, live vs legacy
+- `specs/editing-projects.md` — catalog fields, live ids, Odoo images
 - `specs/i18n.md` — locales and key paths
-- `specs/showcase/{id}.md` — context for a specific project card (`id` = catalog id)
+- `specs/showcase/{id}.md` — one card’s context
+- `specs/README.md` — index / removed projects note
 
-Rules of thumb:
+## After editing (mandatory)
 
-1. Structure in `js/projects-catalog.js` (`group: 'odoo' | 'software'`); user-facing text only in `assets/i18n/{en,ar,de}.json`.
+If you changed any of the following, update specs **before** finishing the reply:
+
+| Change | Update |
+|--------|--------|
+| Add/remove/hide/reorder project | `editing-projects.md` live table + `showcase/{id}.md` + `showcase/README.md` |
+| New Odoo/software group or image paths | `editing-projects.md` + Odoo showcase + `assets/images/projects/odoo/README.md` if needed |
+| Nav, hero stats, section order, entrypoints | `architecture.md` |
+| Locale keys / experience / skills copy structure | `i18n.md` (and showcase if project story changed) |
+| Hard product rules (e.g. no Maestro, no nav LinkedIn) | this rule + `specs/README.md` |
+
+Do **not** leave specs for “later”. Incomplete specs = incomplete task.
+
+## Coding rules of thumb
+
+1. Structure in `js/projects-catalog.js` (`group: 'odoo' | 'software'`); copy only in `assets/i18n/{en,ar,de}.json`.
 2. Keep all three locales in sync for any new/changed keys.
 3. Prefer `hidden: true` over deleting private project data.
-4. Do not extend legacy `js/main.js` / `assets/scripts/**` for the live site unless migrating.
-5. Odoo cards use `assets/images/projects/odoo/` — missing images fall back to icons.
+4. Do not re-add **Maestro**.
+5. Do not add LinkedIn to the top nav (hero/contact/about only).
+6. Hero project count is computed from non-hidden catalog entries (`data-stat="catalog-count"`).
+7. Odoo screenshots: `assets/images/projects/odoo/{food-wms,kds}/` with `cover.png` + numbered files.
+8. Do not extend legacy `js/main.js` / `assets/scripts/**` for the live site unless migrating.

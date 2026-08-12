@@ -3,7 +3,8 @@
 | | |
 |--|--|
 | Catalog id | `civil-registry` |
-| Role on site | .NET / SQL Server sample |
+| group | `software` |
+| Role on site | .NET / SQL Server sample (kept though not on CV) |
 | Period | August 2023 |
 | Stack (tags) | ASP.NET Web Forms, C#, SQL Server |
 

@@ -3,6 +3,7 @@
 | | |
 |--|--|
 | Catalog id | `graduation-system` |
+| group | `software` |
 | Role on site | Freelance academic workflow sample |
 | Period | Feb–Apr 2026 |
 | Stack (tags) | PHP, Laravel, MySQL |

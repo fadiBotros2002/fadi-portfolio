@@ -9,14 +9,18 @@
 
 ## What it is
 
-Custom Odoo 19 work at ASAS: real-time Kitchen Display System (OWL + Odoo bus), POS receipts (thermal & A4 PDF), multi-company, loyalty integration via REST with retry.
+Custom Odoo 19 at ASAS: real-time Kitchen Display (OWL + Odoo bus), POS receipts (thermal & A4 PDF), multi-company, loyalty via REST with retry.
 
 ## Portfolio wiring
 
-- Images: `assets/images/projects/odoo/kds/`.
-- Related experience bullets: `experience.asas.b4`, `experience.asas.b5`.
+| Path | Role |
+|------|------|
+| `assets/images/projects/odoo/kds/cover.png` | Main card (Kitchen Display LIVE) |
+| `1.png` … `4.png` | Gallery (POS floor plan, related screens) |
+
+- Experience bullets: `experience.asas.b4`, `experience.asas.b5`.
 - Flags: `featured: true`, `group: 'odoo'`.
 
 ## Edit tips
 
-Prefer anonymized UI shots. Keep experience and project copy aligned when the scope changes.
+Prefer anonymized UI shots. Keep experience + project copy aligned when scope changes.
