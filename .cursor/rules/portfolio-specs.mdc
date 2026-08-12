@@ -1,0 +1,20 @@
+---
+description: Read portfolio specs before editing site structure, projects, or i18n
+alwaysApply: true
+---
+
+# Portfolio specs
+
+Before changing projects, i18n, components, or architecture, read the relevant files under `specs/`:
+
+- `specs/architecture.md` — live vs legacy entrypoints
+- `specs/editing-projects.md` — catalog + i18n split, hide flag, add checklist
+- `specs/i18n.md` — locales and key paths
+- `specs/showcase/{id}.md` — context for a specific project card (`id` = catalog id)
+
+Rules of thumb:
+
+1. Structure in `js/projects-catalog.js`; user-facing text only in `assets/i18n/{en,ar,de}.json`.
+2. Keep all three locales in sync for any new/changed keys.
+3. Prefer `hidden: true` over deleting private project data.
+4. Do not extend legacy `js/main.js` / `assets/scripts/**` for the live site unless migrating.
