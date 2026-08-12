@@ -11,7 +11,7 @@ Static multi-page shell: `index.html` loads HTML fragments into placeholders, th
 | `js/i18n/config.js` | Locales, cycle, `basePath` |
 | `js/i18n/loader.js` | `window.I18n` — load JSON, `t()`, `apply()` |
 | `js/projects-catalog.js` | `PROJECTS_CATALOG` structure only (no user-facing text) |
-| `js/projects.js` | Renders cards from catalog + i18n; gallery; hide filter |
+| `js/projects.js` | Renders cards into `#odooProjectsGrid` and `#projectsGrid` by `group` |
 | `js/app.js` | Theme, language picker, nav, scroll; calls `renderProjects()` |
 | `styles/main.css` | Main styles |
 | `assets/styles/themes/{light,dark}.css` | Theme variables |

@@ -9,10 +9,10 @@
     "contact": "تواصل"
   },
   "hero": {
-    "kicker": "فادي سمير بطرس · دمشق، سوريا",
+    "kicker": "فادي سمير بطرس · دمشق، سوريا (متاح للعمل عن بُعد)",
     "title": "مرحباً، أنا فادي سمير بطرس",
-    "subtitle": "مهندس برمجيات — Backend (Laravel)",
-    "description": "أركز على بناء APIs موثوقة، لوحات إدارة بـ Filament، وأتمتة سير العمل عبر n8n، مع أساس قوي في الواجهات (HTML/CSS/JS وBlade وتجربة عملية في React وVue).",
+    "subtitle": "مهندس Backend · مطوّر ومنفّذ Odoo",
+    "description": "حلول PHP/Laravel وOdoo ERP مخصّصة — APIs قابلة للتوسع، تطبيقات FilamentPHP، وأتمتة سير العمل عبر n8n.",
     "viewProjects": "عرض المشاريع",
     "contactMe": "تواصل معي",
     "linkedin": "ملفي على LinkedIn",
@@ -24,58 +24,73 @@
   },
   "about": {
     "title": "نبذة",
-    "description1": "مهندس برمجيات متحمس، أتخصص في تطوير الـ Backend باستخدام PHP وLaravel، مع خبرة قوية في أتمتة سير العمل عبر n8n، وبناء APIs ولوحات إدارة باستخدام FilamentPHP.",
-    "description2": "لدي أساس متين في الواجهات (HTML وCSS وJavaScript وBlade) وتجربة عملية في React وVue، وأعمل ضمن ممارسات MVC وتصميم RESTful والأحداث والقوائم والتكامل مع بوابات الدفع مثل Stripe.",
+    "description1": "مهندس Backend ومطوّر/منفّذ Odoo — واجهات API بـ PHP/Laravel، تطبيقات FilamentPHP، ووحدات Odoo 19 مخصّصة.",
+    "description2": "أركّز على كود نظيف وآمن وأداء قواعد البيانات، مع دعم واجهات بـ Blade وNext.js وأتمتة n8n لبيئات الإنتاج.",
     "location": "دمشق، سوريا",
     "cardTitle": "ملخص سريع",
     "factFocus": "التركيز",
     "factEdu": "التعليم",
     "factLang": "اللغات",
-    "factFocusValue": "Backend · APIs · أتمتة",
+    "factFocusValue": "Backend · Odoo · APIs",
     "factEduValue": "بكالوريوس هندسة البرمجيات — AIU (2025)",
     "factLangValue": "عربية · إنجليزية · ألمانية",
-    "h1": "CI/CD عبر GitHub Actions · Docker · Linux (Ubuntu)",
-    "h2": "افتراضية: Proxmox وVMware ESXi",
-    "h3": "MySQL وPostgreSQL وSQL Server واختبارات تحميل بـ JMeter واختبارات آلية (PHPUnit · Playwright)"
+    "h1": "Odoo 19 Community · Python · XML · OWL",
+    "h2": "Laravel · FilamentPHP · REST APIs · Queues · RBAC",
+    "h3": "MySQL وPostgreSQL · PHPUnit · JMeter · K6 · Playwright"
   },
   "experience": {
     "title": "الخبرة العملية",
-    "lead": "مسار يجمع بين البنية التحتية، الأتمتة، وتطوير البرمجيات.",
-    "samware": {
-      "role": "مساعد أنظمة (متدرّب → موظف)",
-      "b1": "مراكز البيانات: تركيب عملي للخوادم، المبدلات، ووحدات التخزين ضمن بيئة إنتاجية.",
-      "b2": "الافتراضية: دعم نشر وإعداد VMware ESXi وإدارة بيئات الخوادم الافتراضية.",
-      "b3": "الأتمتة: بناء مراقبة آلية عبر n8n تربط Proxmox API مع Telegram لتنبيهات فورية."
+    "lead": "Backend وOdoo ERP وأتمتة البنية التحتية.",
+    "asas": {
+      "role": "مطوّر Backend وOdoo ERP",
+      "b1": "تطوير أنظمة خلفية وواجهات REST وقواعد بيانات علائقية بـ PHP وLaravel وMySQL.",
+      "b2": "بناء إدارة ملفات سحابية ونظام إدارة وثائق إلكترونية للأرشفة والتحكم بالوصول.",
+      "b3": "نظام مشتريات متكامل: دورة الشراء والعروض والفواتير.",
+      "b4": "وحدات Odoo 19 مخصّصة — نظام عرض مطبخ فوري (KDS) بـ OWL وOdoo bus.",
+      "b5": "إيصالات POS (حراري وA4 PDF)، بنية متعددة الشركات، وولاء عبر REST مع إعادة محاولة آلية."
     },
     "freelance": {
-      "role": "تطوير برمجيات مستقل",
-      "summary": "تصميم وتنفيذ أنظمة ويب وواجهات API باستخدام Laravel وFilament، مع تكاملات Firebase وخطوط دفع واختبارات تحميل."
+      "role": "مطوّر برمجيات مستقل",
+      "b1": "Smart Expense Tracker (Laravel 12، MySQL): طبقات خدمات وموارد API وطوابير وإشعارات Firebase.",
+      "b2": "نظام إدارة التخرج (PHP، Laravel): أتمتة سير أكاديمي وتحقق من وثائق وتقارير."
+    },
+    "samware": {
+      "role": "مساعد أنظمة وأخصائي أتمتة n8n",
+      "b1": "مراكز البيانات: تركيب عملي للخوادم والمبدلات والتخزين في بيئة إنتاجية.",
+      "b2": "الافتراضية: نشر وإعداد بيئات VMware ESXi.",
+      "b3": "الأتمتة: مراقبة عبر n8n تربط Proxmox API مع Telegram لتنبيهات فورية."
     },
     "education": {
       "degree": "بكالوريوس هندسة البرمجيات",
       "school": "الجامعة العربية الدولية (AIU) · التخرج 2025",
-      "languages": "<strong>اللغات:</strong> عربية (لغة أم) · إنجليزية (جيد جداً) · ألمانية (جيدة)"
+      "languages": "<strong>اللغات:</strong> عربية (لغة أم) · إنجليزية (احترافية) · ألمانية (جيدة)"
     }
   },
   "skills": {
     "title": "المهارات الأساسية",
     "lead": "مجموعات مهارات مطابقة لسيرتي الذاتية — بدون أرقام تعبيرية وهمية.",
-    "g1Title": "لغات وإطارات",
-    "g1Hint": "طبقة التطبيق والواجهات الخلفية",
-    "g2Title": "أتمتة وبنية تحتية",
-    "g2Hint": "تشغيل، حاويات، وبيئات إنتاجية",
-    "g3Title": "قواعد البيانات والأداء",
-    "g3Hint": "موثوقية البيانات واختبار التحميل",
-    "g4Title": "أدوات ومفاهيم",
-    "g4Hint": "من التصميم إلى الإطلاق",
-    "g5Title": "نشر الخوادم",
-    "g5Hint": "بيئات استضافة عملت عليها",
+    "g1Title": "Backend وواجهات API",
+    "g1Hint": "طبقة التطبيق والواجهات البرمجية",
+    "g2Title": "ERP وأتمتة",
+    "g2Hint": "تنفيذ Odoo وأتمتة سير العمل",
+    "gFrontendTitle": "الواجهات",
+    "gFrontendHint": "طبقات الواجهة التي أعمل بها",
+    "g3Title": "قواعد البيانات",
+    "g3Hint": "الموثوقية وتحسين ORM",
+    "gInfraTitle": "DevOps وبنية تحتية",
+    "gInfraHint": "CI/CD وحاويات وأسس التشغيل",
+    "g4Title": "أدوات وتكاملات",
+    "g4Hint": "التسليم والخدمات الخارجية",
     "g6Title": "الاختبارات والجودة",
-    "g6Hint": "اختبارات آلية من الوحدة إلى المتصفح"
+    "g6Hint": "اختبارات آلية واختبار تحميل"
   },
   "projects": {
     "title": "مشاريع مختارة",
-    "lead": "أبرز الأعمال: <strong>VisionMate</strong> و<strong>Wazefni</strong> — مع فيديوهات ومنشورات على LinkedIn لكل مشروع.",
+    "lead": "تنفيذات Odoo ERP مع خلفيات Laravel — لقطات وعروض حيث تتوفر.",
+    "odooTitle": "Odoo ERP",
+    "odooLead": "تنفيذات Community ووحدات مخصّصة (OWL، POS، مخزون).",
+    "softwareTitle": "برمجيات وأتمتة",
+    "softwareLead": "أبرز الأعمال: <strong>VisionMate</strong> و<strong>Wazefni</strong> — مع عروض على LinkedIn.",
     "ui": {
       "github": "GitHub",
       "featured": "مشروع بارز",
@@ -83,10 +98,20 @@
       "minorStudent": "مهمة طلابية"
     },
     "items": {
+      "odoo-food-wms": {
+        "title": "إدارة مستودع توزيع غذائي",
+        "period": "شخصي · Odoo 19 Community",
+        "description": "إعداد Inventory وPurchase وSales وContacts لتوزيع غذائي. مواقع مستودع داخلية، دورات شراء/بيع، Lots/تتبع، وتقارير حركة المخزون."
+      },
+      "odoo-kds": {
+        "title": "Odoo KDS وتخصيصات POS",
+        "period": "ASAS · 2026",
+        "description": "نظام عرض مطبخ فوري بـ OWL وOdoo bus لتوجيه الطلبات. إيصالات POS (حراري وA4)، بنية متعددة الشركات، وولاء عبر REST مع إعادة محاولة آلية."
+      },
       "visionmate": {
         "title": "VisionMate",
         "period": "فبراير – يونيو 2025 · مشروع تخرّج",
-        "description": "منصة لدعم ذوي الإعاقة البصرية: Laravel وMySQL، React للمتطوعين، Filament للإدارة، تكامل AI وStripe للتبرعات. تمثيل الجامعة العربية الدولية في معرض دمشق الدولي (TEXPO).",
+        "description": "منصة مساعدة لذوي الإعاقة البصرية: APIs مع صلاحيات (مستخدم، متطوع، أدمن)، ميزات AI، Stripe، ولوحة Filament. تمثيل AIU في معرض دمشق الدولي (TEXPO).",
         "links": {
           "video": "فيديو المشروع (LinkedIn)",
           "texpo": "معرض دمشق الدولي · TEXPO"
@@ -95,18 +120,18 @@
       "wazefni": {
         "title": "Wazefni",
         "period": "أكتوبر 2024 – يناير 2025 · مشروع جامعي",
-        "description": "منصة وساطة توظيف مع ميزات AI لبناء السيرة واقتراح الوظائف، وتصفية المرشحين للشركات، واختبارات مهارات. تم العرض على LinkedIn.",
+        "description": "منصة وساطة توظيف: Backend MVC لأصحاب العمل والمرشحين، أدوات AI، إشعارات SMTP، واختبار تحميل بـ JMeter.",
         "links": { "video": "فيديو المشروع (LinkedIn)" }
       },
       "tawtheeq": {
         "title": "Tawtheeq",
-        "period": "Backend Developer · 2026",
-        "description": "نظام ديوان وأرشفة إلكترونية (Document Archiving & Verification System) لإدارة المعاملات الصادرة والواردة. بنية آمنة مع توثيق الوثائق المطبوعة عبر روابط ديناميكية وQR Codes."
+        "period": "ASAS · 2026",
+        "description": "نظام إدارة وتوثيق وثائق إلكترونية للمعاملات الصادرة والواردة — أرشفة آمنة مع تحقق من الوثائق المطبوعة عبر روابط ديناميكية وQR."
       },
       "smart-expense": {
         "title": "Smart Expense Tracker",
-        "period": "قيد التطوير · عمل حر",
-        "description": "Laravel 12، Firebase للإشعارات، طوابير ومهام في الخلفية، طبقة خدمات وموارد API. لا يوجد مستودع GitHub عام حالياً."
+        "period": "عمل حر · فبراير–أبريل 2026",
+        "description": "خلفية Laravel 12 بطبقات خدمات وموارد API وطوابير وإشعارات Firebase فورية."
       },
       "proxmox-alerts": {
         "title": "تنبيهات Proxmox عبر Telegram",
@@ -115,13 +140,8 @@
       },
       "graduation-system": {
         "title": "نظام إدارة التخرج",
-        "period": "فبراير 2026",
-        "description": "مهمة طلابية صغيرة لأتمتة خطوات بسيطة متعلقة بالتخرج (ليس مشروعاً رئيسياً). Laravel وMySQL."
-      },
-      "maestro": {
-        "title": "Maestro — متجر آلات موسيقية",
-        "period": "مايو – يونيو 2023",
-        "description": "منصة كاملة مع CRUD على MySQL، مصادقة PHP آمنة، والتحقق من جانب العميل بـ JavaScript."
+        "period": "عمل حر · فبراير–أبريل 2026",
+        "description": "سير عمل Laravel للعمليات الأكاديمية: تحقق من الوثائق وتوليد تقارير."
       },
       "civil-registry": {
         "title": "نظام السجل المدني",
@@ -134,7 +154,7 @@
     "title": "تواصل معي",
     "subtitle": "لنتواصل",
     "subtitleHint": "اختر الطريقة المناسبة لك للتواصل",
-    "description": "جاهز للتعاون على منتجات Laravel وواجهات API وأتمتة العمليات.",
+    "description": "متاح للعمل عن بُعد على Laravel وOdoo وواجهات API والأتمتة.",
     "email": "البريد الإلكتروني",
     "phone": "الهاتف",
     "location": "الموقع",
@@ -148,7 +168,7 @@
     }
   },
   "footer": {
-    "tagline": "مهندس برمجيات — Laravel · APIs · Automation",
+    "tagline": "Backend · Odoo · APIs · أتمتة",
     "copyright": "© 2026 فادي سمير بطرس."
   }
 }

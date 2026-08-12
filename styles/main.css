@@ -606,6 +606,33 @@ section {
     background: var(--color-white);
 }
 
+.projects-group {
+    margin-top: var(--spacing-12);
+}
+
+.projects-group:first-of-type {
+    margin-top: var(--spacing-4);
+}
+
+.projects-group__head {
+    margin-bottom: var(--spacing-8);
+    max-width: 40rem;
+}
+
+.projects-group__title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 var(--spacing-2);
+}
+
+.projects-group__lead {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: var(--font-size-base);
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));

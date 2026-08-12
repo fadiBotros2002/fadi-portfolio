@@ -14,7 +14,8 @@ Before changing projects, i18n, components, or architecture, read the relevant f
 
 Rules of thumb:
 
-1. Structure in `js/projects-catalog.js`; user-facing text only in `assets/i18n/{en,ar,de}.json`.
+1. Structure in `js/projects-catalog.js` (`group: 'odoo' | 'software'`); user-facing text only in `assets/i18n/{en,ar,de}.json`.
 2. Keep all three locales in sync for any new/changed keys.
 3. Prefer `hidden: true` over deleting private project data.
 4. Do not extend legacy `js/main.js` / `assets/scripts/**` for the live site unless migrating.
+5. Odoo cards use `assets/images/projects/odoo/` — missing images fall back to icons.

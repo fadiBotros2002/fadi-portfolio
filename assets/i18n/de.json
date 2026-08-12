@@ -9,10 +9,10 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "kicker": "Fadi Sameer Botros · Damaskus, Syrien",
+    "kicker": "Fadi Sameer Botros · Damaskus, Syrien (offen für Remote)",
     "title": "Hallo, ich bin Fadi Sameer Botros",
-    "subtitle": "Softwareingenieur — Backend (Laravel)",
-    "description": "Ich entwickle zuverlässige APIs und Filament-Admin-Oberflächen, automatisiere Workflows mit n8n und bringe solide Grundlagen in HTML/CSS/JS und Blade mit praktischer React-/Vue-Erfahrung mit.",
+    "subtitle": "Backend-Softwareingenieur · Odoo-Entwickler",
+    "description": "PHP/Laravel und individuelle Odoo-ERP-Lösungen — skalierbare REST-APIs, FilamentPHP-Unternehmensanwendungen und Workflow-Automatisierung mit n8n.",
     "viewProjects": "Projekte ansehen",
     "contactMe": "Kontakt",
     "linkedin": "LinkedIn-Profil",
@@ -24,58 +24,73 @@
   },
   "about": {
     "title": "Profil",
-    "description1": "Motivierter Softwareingenieur mit Fokus auf Backend-Entwicklung mit PHP/Laravel, Workflow-Automatisierung mit n8n und Admin-Systemen mit FilamentPHP.",
-    "description2": "Solide Grundlagen in HTML, CSS, JavaScript und Blade, praktische Erfahrung mit React/Vue sowie MVC, RESTful Design, Events, Queues und Stripe-Integrationen.",
+    "description1": "Backend-Softwareingenieur und Odoo-Entwickler/Implementierer — PHP/Laravel-APIs, FilamentPHP-Unternehmensapps und individuelle Odoo-19-Module.",
+    "description2": "Ich priorisiere sauberen, sicheren Code und Datenbankleistung, mit Frontend-Unterstützung in Blade und Next.js sowie n8n-Automatisierung für Produktionsworkflows.",
     "location": "Damaskus, Syrien",
     "cardTitle": "Auf einen Blick",
     "factFocus": "Schwerpunkt",
     "factEdu": "Ausbildung",
     "factLang": "Sprachen",
-    "factFocusValue": "Backend · APIs · Automatisierung",
+    "factFocusValue": "Backend · Odoo · APIs",
     "factEduValue": "B.Sc. Softwaretechnik — AIU (2025)",
     "factLangValue": "Arabisch · Englisch · Deutsch",
-    "h1": "CI/CD mit GitHub Actions · Docker · Linux (Ubuntu)",
-    "h2": "Virtualisierung: Proxmox & VMware ESXi",
-    "h3": "MySQL & PostgreSQL, SQL Server, JMeter-Lasttests und automatisierte Tests (PHPUnit · Playwright)"
+    "h1": "Odoo 19 Community · Python · XML · OWL",
+    "h2": "Laravel · FilamentPHP · REST APIs · Queues · RBAC",
+    "h3": "MySQL & PostgreSQL · PHPUnit · JMeter · K6 · Playwright"
   },
   "experience": {
     "title": "Berufserfahrung",
-    "lead": "Ein Weg, der Infrastruktur, Automatisierung und Softwareentwicklung verbindet.",
-    "samware": {
-      "role": "Junior-Systemadministrator (Praktikant bis Festanstellung)",
-      "b1": "Rechenzentrum: praktische Installation von Servern, Switches und Storage in einer Produktionsumgebung.",
-      "b2": "Virtualisierung: Unterstützung bei VMware-ESXi-Deployment und Verwaltung virtualisierter Serverumgebungen.",
-      "b3": "Automatisierung: n8n-Monitoring von der Proxmox-API zu Telegram für sofortige Benachrichtigungen."
+    "lead": "Backend, Odoo-ERP und Infrastruktur-Automatisierung.",
+    "asas": {
+      "role": "Backend- & Odoo-ERP-Entwickler",
+      "b1": "Skalierbare Backends, REST-APIs und relationale Datenbanken mit PHP, Laravel und MySQL.",
+      "b2": "Sicheres Cloud-File-Management und elektronisches Dokumentenmanagement (Archivierung & Zugriffskontrolle).",
+      "b3": "Full-Stack-Beschaffungssystem: Einkaufsprozesse, Angebote und Rechnungsstellung.",
+      "b4": "Individuelle Odoo-19-Module — Echtzeit-Kitchen-Display-System (KDS) mit OWL und Odoo-Bus.",
+      "b5": "POS-Belege (Thermo & A4-PDF), Multi-Company, Loyalty über REST-APIs mit Retry."
     },
     "freelance": {
-      "role": "Freelance-Softwareentwicklung",
-      "summary": "Entwicklung von Web-Systemen und APIs mit Laravel und Filament, plus Firebase-Integrationen, Zahlungen und Lasttests."
+      "role": "Freelance-Softwareentwickler",
+      "b1": "Smart Expense Tracker (Laravel 12, MySQL): Service-Layer, API-Ressourcen, Queues, Firebase-Benachrichtigungen.",
+      "b2": "Graduation Management System (PHP, Laravel): akademische Workflows, Dokumentenprüfung, Berichte."
+    },
+    "samware": {
+      "role": "Junior-Systemadministrator & n8n-Automatisierungsspezialist",
+      "b1": "Rechenzentrum: praktische Hardware — Server, Switches und Storage in Produktion.",
+      "b2": "Virtualisierung: VMware-ESXi-Umgebungen bereitgestellt und konfiguriert.",
+      "b3": "Automatisierung: n8n-Monitoring von der Proxmox-API zu Telegram für sofortige Alerts."
     },
     "education": {
       "degree": "B.Sc. Softwaretechnik",
       "school": "Arab International University (AIU) · Abschluss 2025",
-      "languages": "<strong>Sprachen:</strong> Arabisch (Muttersprache) · Englisch (sehr gut) · Deutsch (gut)"
+      "languages": "<strong>Sprachen:</strong> Arabisch (Muttersprache) · Englisch (professionell) · Deutsch (gut)"
     }
   },
   "skills": {
     "title": "Kernkompetenzen",
     "lead": "Kompetenzgruppen passend zu meinem Lebenslauf — ohne dekorative Prozentbalken.",
-    "g1Title": "Sprachen & Frameworks",
-    "g1Hint": "Anwendungs- und Backend-Schicht",
-    "g2Title": "Automatisierung & Infrastruktur",
-    "g2Hint": "Betrieb, Container, Produktionsumgebungen",
-    "g3Title": "Datenbanken & Performance",
-    "g3Hint": "Datenzuverlässigkeit und Lasttests",
-    "g4Title": "Tools & Konzepte",
-    "g4Hint": "Vom Design bis zum Release",
-    "g5Title": "Server-Deployment",
-    "g5Hint": "Hosting-Plattformen, die ich genutzt habe",
-    "g6Title": "Tests & Qualität",
-    "g6Hint": "Automatisierte Tests von Unit bis Browser"
+    "g1Title": "Backend & APIs",
+    "g1Hint": "Anwendungs- und API-Schicht",
+    "g2Title": "ERP & Automatisierung",
+    "g2Hint": "Odoo-Implementierungen und Workflow-Automatisierung",
+    "gFrontendTitle": "Frontend",
+    "gFrontendHint": "UI-Schichten, die ich ausliefere",
+    "g3Title": "Datenbanken",
+    "g3Hint": "Zuverlässigkeit und ORM-Optimierung",
+    "gInfraTitle": "DevOps & Infrastruktur",
+    "gInfraHint": "CI/CD, Container und Ops-Grundlagen",
+    "g4Title": "Tools & Integrationen",
+    "g4Hint": "Delivery und Drittanbieterdienste",
+    "g6Title": "Tests & QA",
+    "g6Hint": "Automatisierte Tests und Lasttests"
   },
   "projects": {
     "title": "Ausgewählte Projekte",
-    "lead": "Highlights: <strong>VisionMate</strong> und <strong>Wazefni</strong> — jeweils mit LinkedIn-Demos und Beiträgen.",
+    "lead": "Odoo-ERP-Implementierungen plus Laravel-Backends — Screenshots und Demos, wo verfügbar.",
+    "odooTitle": "Odoo ERP",
+    "odooLead": "Community-Edition-Implementierungen und Custom-Module (OWL, POS, Lager).",
+    "softwareTitle": "Software & Automatisierung",
+    "softwareLead": "Highlights: <strong>VisionMate</strong> und <strong>Wazefni</strong> — mit LinkedIn-Demos.",
     "ui": {
       "github": "GitHub",
       "featured": "Hervorgehoben",
@@ -83,10 +98,20 @@
       "minorStudent": "Studentenaufgabe"
     },
     "items": {
+      "odoo-food-wms": {
+        "title": "Food-Distribution-WMS",
+        "period": "Persönlich · Odoo 19 Community",
+        "description": "Inventory, Purchase, Sales und Contacts für Lebensmittelverteilung. Lagerorte, Beschaffungs-/Verkaufszyklen, Lots/Rückverfolgbarkeit und Lagerbewegungsberichte."
+      },
+      "odoo-kds": {
+        "title": "Odoo KDS & POS-Anpassungen",
+        "period": "ASAS · 2026",
+        "description": "Echtzeit-Kitchen-Display mit OWL und Odoo-Bus für Live-Auftragsrouting. POS-Belege (Thermo & A4), Multi-Company und Loyalty über REST mit automatischem Retry."
+      },
       "visionmate": {
         "title": "VisionMate",
         "period": "Februar – Juni 2025 · Abschlussprojekt",
-        "description": "Plattform für Menschen mit Sehbehinderung: Laravel & MySQL, React für Freiwillige, Filament-Admin, KI-Funktionen und Stripe-Spenden. Vertretung der AIU auf der Damaskus-Messe (TEXPO).",
+        "description": "Assistenzplattform für Sehbehinderte: REST-APIs mit RBAC, KI, Stripe-Spenden, Filament-Admin. Vertretung der AIU auf der Damaskus-Messe (TEXPO).",
         "links": {
           "video": "Projektvideo (LinkedIn)",
           "texpo": "Damaskus-Messe · TEXPO"
@@ -95,18 +120,18 @@
       "wazefni": {
         "title": "Wazefni",
         "period": "Oktober 2024 – Januar 2025 · Universitätsprojekt",
-        "description": "Vermittlungsplattform mit KI-gestütztem Lebenslauf, Job-Matching, Kandidatenfilterung für Arbeitgeber und Skill-Tests. Auf LinkedIn vorgestellt.",
+        "description": "Vermittlungsplattform: MVC-Backend für Arbeitgeber und Kandidaten, KI-Tools, SMTP und JMeter-Lasttests.",
         "links": { "video": "Projektvideo (LinkedIn)" }
       },
       "tawtheeq": {
         "title": "Tawtheeq",
-        "period": "Backend Developer · 2026",
-        "description": "Elektronisches Archiv- und Verifikationssystem für ein- und ausgehende Vorgänge. Sichere Architektur verschlüsselt und verbirgt Cloud-Speicherpfade; gedruckte Dokumente werden über dynamische Links und QR-Codes verifiziert."
+        "period": "ASAS · 2026",
+        "description": "Elektronisches Dokumentenmanagement und Verifikation für ein-/ausgehende Vorgänge — sichere Archivierung mit QR- und Link-Prüfung für Ausdrucke."
       },
       "smart-expense": {
         "title": "Smart Expense Tracker",
-        "period": "In Entwicklung · Freelance",
-        "description": "Laravel 12, Firebase-Benachrichtigungen, Queued Jobs, Service-Layer und API-Ressourcen. Noch kein öffentliches GitHub-Repo."
+        "period": "Freelance · Feb–Apr 2026",
+        "description": "Laravel-12-Backend mit Service-Layer, API-Ressourcen, Queues und Firebase-Echtzeitbenachrichtigungen."
       },
       "proxmox-alerts": {
         "title": "Proxmox → Telegram-Benachrichtigungen",
@@ -115,13 +140,8 @@
       },
       "graduation-system": {
         "title": "Abschlussverwaltungssystem",
-        "period": "Februar 2026",
-        "description": "Kleine Studentenaufgabe zur Automatisierung einfacher Abschlussschritte (kein Hauptprojekt). Laravel & MySQL."
-      },
-      "maestro": {
-        "title": "Maestro — Musikinstrumente-Shop",
-        "period": "Mai – Juni 2023",
-        "description": "Full-Stack-Shop mit MySQL-CRUD, sicherer PHP-Authentifizierung und clientseitiger JS-Validierung."
+        "period": "Freelance · Feb–Apr 2026",
+        "description": "Laravel-Workflows für akademische Prozesse: Dokumentenprüfung und Berichtserstellung."
       },
       "civil-registry": {
         "title": "Zivilregister-System",
@@ -134,7 +154,7 @@
     "title": "Kontakt",
     "subtitle": "Lassen Sie uns sprechen",
     "subtitleHint": "Wählen Sie den passenden Kanal",
-    "description": "Offen für Zusammenarbeit an Laravel-Produkten, APIs und Automatisierung.",
+    "description": "Offen für Remote-Arbeit an Laravel-Backends, Odoo-ERP, APIs und Automatisierung.",
     "email": "E-Mail",
     "phone": "Telefon",
     "location": "Standort",
@@ -148,7 +168,7 @@
     }
   },
   "footer": {
-    "tagline": "Softwareingenieur — Laravel · APIs · Automatisierung",
+    "tagline": "Backend · Odoo · APIs · Automatisierung",
     "copyright": "© 2026 Fadi Sameer Botros."
   }
 }

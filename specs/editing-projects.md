@@ -4,10 +4,10 @@
 
 | Concern | File(s) |
 |---------|---------|
-| Structure (id, tech, links, flags, images) | `js/projects-catalog.js` |
+| Structure (id, tech, links, flags, images, group) | `js/projects-catalog.js` |
 | Title, period, description, link labels | `assets/i18n/en.json`, `ar.json`, `de.json` under `projects.items.{id}` |
 | Render / badges / gallery / hide | `js/projects.js` |
-| Screenshots | `assets/images/projects/` (see folder README) |
+| Screenshots | `assets/images/projects/` (Odoo: `odoo/` — see README) |
 
 **Never** put Arabic/English/German prose in the catalog — only in i18n.
 
@@ -16,6 +16,7 @@
 ```js
 {
   id: 'kebab-id',           // must match projects.items.{id} in all locales
+  group: 'odoo' | 'software', // which grid: #odooProjectsGrid vs #projectsGrid
   icon: 'fas fa-…',         // Font Awesome; shown if no image or image fails
   image: 'assets/…',        // optional main preview
   gallery: ['assets/…'],    // optional thumbs; click swaps main image
