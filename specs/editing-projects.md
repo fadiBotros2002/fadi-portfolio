@@ -61,10 +61,12 @@ CV rule: projects on the site but missing from the CV may stay; do not delete so
 
 ## CV deep links
 
-Pattern: `{portfolio-origin}/#project-{catalog-id}`
+**Preferred:** `{origin}/p/{catalog-id}`  
+Examples: `/p/odoo-food-wms`, `/p/odoo-kds`, `/p/graduation-system`  
 
-Examples: `#project-odoo-food-wms`, `#project-odoo-kds`, `#project-visionmate`.  
-Section-only: `#odoo-projects`, `#projects`.
+Also: `/?project={id}` · Legacy: `/#project-{id}`  
+
+Netlify: `netlify.toml` rewrites `/p/*` → `index.html` (200). JS reads the path via `getDeepLinkedProjectId()`.
 
 ## Checklist: hide without deleting
 

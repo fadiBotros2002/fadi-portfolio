@@ -2,6 +2,12 @@
 [build]
   publish = "."
 
+# Pretty CV links: /p/odoo-food-wms → same index, JS reads pathname
+[[redirects]]
+  from = "/p/*"
+  to = "/index.html"
+  status = 200
+
 # Optional: suggest a readable site name in Netlify UI:
 # Site configuration → Site details → Change site name → e.g. fadi-botros
 # Result: https://fadi-botros.netlify.app

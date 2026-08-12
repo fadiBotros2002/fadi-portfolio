@@ -46,22 +46,29 @@ Static shell: `index.html` loads HTML fragments into placeholders, then JS appli
 - Primary CTA in hero: `#odoo-projects`
 - Images: if `img` fails → hidden + icon fallback (`project-icon--visible`)
 - Each card: `id="project-{catalog-id}"` (e.g. `#project-odoo-food-wms`)
-- Deep link: after `renderProjects()`, `scrollToProjectHash()` scrolls + brief `.project-card--focus`
+- Deep link: `#project-{id}` — `scrollToProjectHash()` retries until the card exists, then re-scrolls after body fade-in (`history.scrollRestoration = 'manual'`). Also on `hashchange` + `window.load`.
 
-### CV deep-link examples (Netlify base)
+### CV deep links (use these)
 
-| Project | URL hash |
-|---------|----------|
-| Food WMS | `/#project-odoo-food-wms` |
-| Odoo KDS | `/#project-odoo-kds` |
-| VisionMate | `/#project-visionmate` |
-| Wazefni | `/#project-wazefni` |
-| Tawtheeq | `/#project-tawtheeq` |
-| Smart Expense | `/#project-smart-expense` |
-| Graduation | `/#project-graduation-system` |
-| Proxmox alerts | `/#project-proxmox-alerts` |
-| Civil registry | `/#project-civil-registry` |
-| All Odoo | `/#odoo-projects` |
+Preferred path (works after Netlify deploy with rewrite):
+
+| Project | URL |
+|---------|-----|
+| Food WMS | `/p/odoo-food-wms` |
+| Odoo KDS | `/p/odoo-kds` |
+| VisionMate | `/p/visionmate` |
+| Wazefni | `/p/wazefni` |
+| Tawtheeq | `/p/tawtheeq` |
+| Smart Expense | `/p/smart-expense` |
+| Graduation | `/p/graduation-system` |
+| Proxmox alerts | `/p/proxmox-alerts` |
+| Civil registry | `/p/civil-registry` |
+| All Odoo section | `/#odoo-projects` |
+
+Fallback query (also supported): `/?project=odoo-food-wms`  
+Legacy hash: `/#project-odoo-food-wms` (less reliable on first load)
+
+`openDeepLinkedProject()` runs from `PortfolioApp.init` after `renderProjects()` + fade-in.
 
 ## Legacy / unused for the live page
 

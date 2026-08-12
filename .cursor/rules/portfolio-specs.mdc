@@ -40,5 +40,5 @@ Do **not** leave specs for “later”. Incomplete specs = incomplete task.
 5. Do not add LinkedIn to the top nav (hero/contact/about only).
 6. Hero project count is computed from non-hidden catalog entries (`data-stat="catalog-count"`).
 7. Odoo screenshots: `assets/images/projects/odoo/{food-wms,kds}/` with `cover.png` + numbered files.
-8. CV deep links: `#project-{catalog-id}` on each card; keep working after async `renderProjects()`.
+8. CV deep links: prefer `/p/{catalog-id}` (Netlify rewrite); also `?project=` and legacy `#project-`.
 9. Do not extend legacy `js/main.js` / `assets/scripts/**` for the live site unless migrating.

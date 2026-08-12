@@ -36,12 +36,26 @@ class PortfolioApp {
         const currentTheme = localStorage.getItem('theme') || CONFIG.DEFAULT_THEME;
         this.setTheme(currentTheme);
 
+        const deepLink = typeof getDeepLinkedProjectId === 'function' && getDeepLinkedProjectId();
+        if (deepLink) {
+            try {
+                if ('scrollRestoration' in history) {
+                    history.scrollRestoration = 'manual';
+                }
+            } catch (e) {
+                /* ignore */
+            }
+        }
+
         document.body.style.opacity = '0';
         document.body.style.transition = `opacity ${CONFIG.ANIMATIONS.normal} ease`;
 
-        setTimeout(() => {
-            document.body.style.opacity = '1';
-        }, 100);
+        await new Promise((resolve) => {
+            window.setTimeout(() => {
+                document.body.style.opacity = '1';
+                resolve();
+            }, 100);
+        });
 
         this.applyTranslations();
         this.setupEventListeners();
@@ -49,6 +63,12 @@ class PortfolioApp {
 
         if (typeof renderProjects === 'function') {
             renderProjects();
+        }
+
+        // Deep link AFTER cards exist + fade-in (hash alone is unreliable on first paint)
+        if (typeof openDeepLinkedProject === 'function') {
+            await new Promise((r) => window.setTimeout(r, 50));
+            openDeepLinkedProject();
         }
     }
 

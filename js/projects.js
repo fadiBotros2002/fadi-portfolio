@@ -1,3 +1,81 @@
+/** Deep links for CV / sharing
+ *  Preferred: /p/{catalog-id}  (Netlify rewrite → index.html)
+ *  Also:     ?project={catalog-id}
+ *  Legacy:   #project-{catalog-id}
+ */
+
+function getDeepLinkedProjectId() {
+    const pathMatch = window.location.pathname.match(/\/p\/([^/]+)\/?$/);
+    if (pathMatch) {
+        try {
+            return decodeURIComponent(pathMatch[1]);
+        } catch (e) {
+            return pathMatch[1];
+        }
+    }
+
+    const fromQuery = new URLSearchParams(window.location.search).get('project');
+    if (fromQuery) return fromQuery.trim();
+
+    const hash = window.location.hash || '';
+    if (hash.startsWith('#project-')) return hash.slice('#project-'.length);
+
+    return null;
+}
+
+function focusProjectCard(projectId) {
+    if (!projectId) return false;
+
+    const el = document.getElementById(`project-${projectId}`);
+    if (!el) return false;
+
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+
+    const navOffset = 88;
+    const top = el.getBoundingClientRect().top + window.pageYOffset - navOffset;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
+
+    el.classList.add('project-card--focus');
+    window.clearTimeout(window.__projectFocusTimer);
+    window.__projectFocusTimer = window.setTimeout(() => {
+        el.classList.remove('project-card--focus');
+    }, 2800);
+
+    return true;
+}
+
+/** Call after projects are in the DOM and the page has settled. */
+function openDeepLinkedProject() {
+    const projectId = getDeepLinkedProjectId();
+    if (!projectId) return;
+
+    try {
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+    } catch (e) {
+        /* ignore */
+    }
+
+    let tries = 0;
+    const maxTries = 50;
+
+    const tick = () => {
+        tries += 1;
+        if (focusProjectCard(projectId)) {
+            window.setTimeout(() => focusProjectCard(projectId), 200);
+            window.setTimeout(() => focusProjectCard(projectId), 600);
+            return;
+        }
+        if (tries < maxTries) {
+            window.setTimeout(tick, 80);
+        }
+    };
+
+    tick();
+}
+
 function renderProjectLinkRows(project) {
     const rows = project.links && Array.isArray(project.links.rows) ? project.links.rows : [];
     const base = `projects.items.${project.id}.links`;
@@ -98,19 +176,6 @@ function projectCardHtml(project, ui) {
         </div>`;
 }
 
-/** CV / share deep links: #project-{catalog-id} */
-function scrollToProjectHash() {
-    const raw = window.location.hash || '';
-    if (!raw.startsWith('#project-')) return;
-
-    const el = document.getElementById(raw.slice(1));
-    if (!el) return;
-
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    el.classList.add('project-card--focus');
-    window.setTimeout(() => el.classList.remove('project-card--focus'), 2200);
-}
-
 function visibleProjectsByGroup(group) {
     return PROJECTS_CATALOG.filter(
         (project) => !project.hidden && (project.group || 'software') === group
@@ -132,18 +197,6 @@ function renderProjects() {
     const ui = window.I18n.data.projects.ui;
     fillProjectsGrid('odooProjectsGrid', 'odoo', ui);
     fillProjectsGrid('projectsGrid', 'software', ui);
-
-    // Cards are created after async component load — re-apply hash after paint
-    requestAnimationFrame(() => scrollToProjectHash());
-}
-
-if (!window.__projectHashBound) {
-    window.__projectHashBound = true;
-    window.addEventListener('hashchange', () => {
-        if ((window.location.hash || '').startsWith('#project-')) {
-            scrollToProjectHash();
-        }
-    });
 }
 
 window.addProject = function (newProject) {
@@ -166,3 +219,7 @@ window.updateProject = function (projectId, updates) {
         renderProjects();
     }
 };
+
+window.openDeepLinkedProject = openDeepLinkedProject;
+window.focusProjectCard = focusProjectCard;
+window.getDeepLinkedProjectId = getDeepLinkedProjectId;
