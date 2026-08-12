@@ -50,7 +50,7 @@ Static shell: `index.html` loads HTML fragments into placeholders, then JS appli
 
 ### CV deep links (use these)
 
-Preferred path (works after Netlify deploy with rewrite):
+Preferred path (Netlify 302 → `/?project=…`; do not use 200 rewrite without root-absolute assets):
 
 | Project | URL |
 |---------|-----|
@@ -65,10 +65,8 @@ Preferred path (works after Netlify deploy with rewrite):
 | Civil registry | `/p/civil-registry` |
 | All Odoo section | `/#odoo-projects` |
 
-Fallback query (also supported): `/?project=odoo-food-wms`  
-Legacy hash: `/#project-odoo-food-wms` (less reliable on first load)
-
-`openDeepLinkedProject()` runs from `PortfolioApp.init` after `renderProjects()` + fade-in.
+Direct (no redirect): `/?project=odoo-food-wms`  
+`index.html` uses `<base href="/">` + root-absolute `/js`, `/styles`, `/components`.
 
 ## Legacy / unused for the live page
 

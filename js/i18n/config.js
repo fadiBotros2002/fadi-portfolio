@@ -7,5 +7,5 @@ window.I18N_CONFIG = {
         en: { name: 'English', dir: 'ltr' },
         de: { name: 'Deutsch', dir: 'ltr' }
     },
-    basePath: 'assets/i18n'
+    basePath: '/assets/i18n'
 };

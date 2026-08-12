@@ -61,12 +61,10 @@ CV rule: projects on the site but missing from the CV may stay; do not delete so
 
 ## CV deep links
 
-**Preferred:** `{origin}/p/{catalog-id}`  
-Examples: `/p/odoo-food-wms`, `/p/odoo-kds`, `/p/graduation-system`  
+**Preferred CV URL:** `{origin}/p/{catalog-id}` → Netlify **302** to `/?project={id}` (stays on site root so CSS/JS load).  
+Also works directly: `/?project={id}`  
 
-Also: `/?project={id}` · Legacy: `/#project-{id}`  
-
-Netlify: `netlify.toml` rewrites `/p/*` → `index.html` (200). JS reads the path via `getDeepLinkedProjectId()`.
+Do not rely on hash-only links for CV. `index.html` uses `<base href="/">` and root-absolute asset paths.
 
 ## Checklist: hide without deleting
 

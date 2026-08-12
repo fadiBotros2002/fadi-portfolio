@@ -14,14 +14,14 @@ const PROJECTS_CATALOG = [
         id: 'odoo-food-wms',
         group: 'odoo',
         icon: 'fas fa-warehouse',
-        image: 'assets/images/projects/odoo/food-wms/cover.png',
+        image: '/assets/images/projects/odoo/food-wms/cover.png',
         gallery: [
-            'assets/images/projects/odoo/food-wms/cover.png',
-            'assets/images/projects/odoo/food-wms/1.png',
-            'assets/images/projects/odoo/food-wms/2.png',
-            'assets/images/projects/odoo/food-wms/3.png',
-            'assets/images/projects/odoo/food-wms/4.png',
-            'assets/images/projects/odoo/food-wms/5.png'
+            '/assets/images/projects/odoo/food-wms/cover.png',
+            '/assets/images/projects/odoo/food-wms/1.png',
+            '/assets/images/projects/odoo/food-wms/2.png',
+            '/assets/images/projects/odoo/food-wms/3.png',
+            '/assets/images/projects/odoo/food-wms/4.png',
+            '/assets/images/projects/odoo/food-wms/5.png'
         ],
         technologies: ['Odoo 19', 'Inventory', 'Purchase', 'Sales', 'Lots'],
         links: { rows: [], github: null },
@@ -33,13 +33,13 @@ const PROJECTS_CATALOG = [
         id: 'odoo-kds',
         group: 'odoo',
         icon: 'fas fa-utensils',
-        image: 'assets/images/projects/odoo/kds/cover.png',
+        image: '/assets/images/projects/odoo/kds/cover.png',
         gallery: [
-            'assets/images/projects/odoo/kds/cover.png',
-            'assets/images/projects/odoo/kds/1.png',
-            'assets/images/projects/odoo/kds/2.png',
-            'assets/images/projects/odoo/kds/3.png',
-            'assets/images/projects/odoo/kds/4.png'
+            '/assets/images/projects/odoo/kds/cover.png',
+            '/assets/images/projects/odoo/kds/1.png',
+            '/assets/images/projects/odoo/kds/2.png',
+            '/assets/images/projects/odoo/kds/3.png',
+            '/assets/images/projects/odoo/kds/4.png'
         ],
         technologies: ['Odoo 19', 'Python', 'OWL', 'POS', 'REST API'],
         links: { rows: [], github: null },
@@ -82,12 +82,12 @@ const PROJECTS_CATALOG = [
         id: 'tawtheeq',
         group: 'software',
         icon: 'fas fa-envelope-open-text',
-        image: 'assets/images/projects/tawtheeq-cover.png',
+        image: '/assets/images/projects/tawtheeq-cover.png',
         gallery: [
-            'assets/images/projects/tawtheeq-1.png',
-            'assets/images/projects/tawtheeq-2.png',
-            'assets/images/projects/tawtheeq-3.png',
-            'assets/images/projects/tawtheeq-4.png'
+            '/assets/images/projects/tawtheeq-1.png',
+            '/assets/images/projects/tawtheeq-2.png',
+            '/assets/images/projects/tawtheeq-3.png',
+            '/assets/images/projects/tawtheeq-4.png'
         ],
         technologies: ['Laravel 12', 'MySQL', 'QR Codes', 'Blade'],
         links: { rows: [], github: null },
@@ -109,13 +109,13 @@ const PROJECTS_CATALOG = [
         id: 'graduation-system',
         group: 'software',
         icon: 'fas fa-user-graduate',
-        image: 'assets/images/projects/gs/gs-1.png',
+        image: '/assets/images/projects/gs/gs-1.png',
         gallery: [
-            'assets/images/projects/gs/gs-2.png',
-            'assets/images/projects/gs/gs-3.png',
-            'assets/images/projects/gs/gs-4.png',
-            'assets/images/projects/gs/gs-5.png',
-            'assets/images/projects/gs/gs-6.png'
+            '/assets/images/projects/gs/gs-2.png',
+            '/assets/images/projects/gs/gs-3.png',
+            '/assets/images/projects/gs/gs-4.png',
+            '/assets/images/projects/gs/gs-5.png',
+            '/assets/images/projects/gs/gs-6.png'
         ],
         technologies: ['PHP', 'Laravel', 'MySQL'],
         links: { rows: [], github: null },
@@ -127,10 +127,10 @@ const PROJECTS_CATALOG = [
         id: 'proxmox-alerts',
         group: 'software',
         icon: 'fas fa-bell',
-        image: 'assets/images/projects/proxmox_telegram_alertSystem-1.png',
+        image: '/assets/images/projects/proxmox_telegram_alertSystem-1.png',
         gallery: [
-            'assets/images/projects/TELEGRAMproxmox_telegram_alertSystem-2.png',
-            'assets/images/projects/proxmox_telegram_alertSystem-1.png'
+            '/assets/images/projects/TELEGRAMproxmox_telegram_alertSystem-2.png',
+            '/assets/images/projects/proxmox_telegram_alertSystem-1.png'
         ],
         technologies: ['n8n', 'Proxmox API', 'Telegram'],
         links: { rows: [], github: 'https://github.com/fadiBotros2002' },

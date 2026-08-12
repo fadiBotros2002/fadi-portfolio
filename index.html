@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
     <title>Fadi Sameer Botros · Software Engineer</title>
     <!-- Initialize theme & language early to avoid FOUC -->
     <script>
@@ -32,10 +33,10 @@
             }
         })();
     </script>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <!-- Theme variable overrides (light/dark) -->
-    <link rel="stylesheet" href="assets/styles/themes/light.css">
-    <link rel="stylesheet" href="assets/styles/themes/dark.css">
+    <link rel="stylesheet" href="/assets/styles/themes/light.css">
+    <link rel="stylesheet" href="/assets/styles/themes/dark.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -64,11 +65,11 @@
     <!-- Footer -->
     <div id="footer"></div>
 
-    <script src="js/i18n/config.js"></script>
-    <script src="js/i18n/loader.js"></script>
-    <script src="js/projects-catalog.js"></script>
-    <script src="js/projects.js"></script>
-    <script src="js/app.js"></script>
+    <script src="/js/i18n/config.js"></script>
+    <script src="/js/i18n/loader.js"></script>
+    <script src="/js/projects-catalog.js"></script>
+    <script src="/js/projects.js"></script>
+    <script src="/js/app.js"></script>
     <script>
         console.log('HTML script tag loaded');
         
@@ -77,14 +78,14 @@
             try {
                 console.log('Starting to load components...');
                 const components = [
-                    { id: 'navigation', file: 'components/navigation.html' },
-                    { id: 'hero', file: 'components/hero.html' },
-                    { id: 'about', file: 'components/about.html' },
-                    { id: 'experience', file: 'components/experience.html' },
-                    { id: 'skills', file: 'components/skills.html' },
-                    { id: 'projects', file: 'components/projects.html' },
-                    { id: 'contact', file: 'components/contact.html' },
-                    { id: 'footer', file: 'components/footer.html' }
+                    { id: 'navigation', file: '/components/navigation.html' },
+                    { id: 'hero', file: '/components/hero.html' },
+                    { id: 'about', file: '/components/about.html' },
+                    { id: 'experience', file: '/components/experience.html' },
+                    { id: 'skills', file: '/components/skills.html' },
+                    { id: 'projects', file: '/components/projects.html' },
+                    { id: 'contact', file: '/components/contact.html' },
+                    { id: 'footer', file: '/components/footer.html' }
                 ];
                 
                 for (const component of components) {
