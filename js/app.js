@@ -396,35 +396,47 @@ class PortfolioApp {
     }
     
     setupStatsCounter() {
+        const catalogCount =
+            typeof PROJECTS_CATALOG !== 'undefined'
+                ? PROJECTS_CATALOG.filter((p) => !p.hidden).length
+                : 0;
+
         const statNumbers = document.querySelectorAll('.stat-number');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const stat = entry.target;
-                    const target = parseInt(stat.getAttribute('data-target'));
-                    let current = 0;
-                    const increment = target / 100;
-                    
-                    const updateCounter = () => {
-                        if (current < target) {
-                            current += increment;
-                            stat.textContent = Math.ceil(current);
-                            setTimeout(updateCounter, 20);
-                        } else {
-                            stat.textContent = target;
-                        }
-                    };
-                    
-                    updateCounter();
-                    observer.unobserve(stat);
-                }
-            });
-        }, {
-            threshold: 0.5
+
+        statNumbers.forEach((stat) => {
+            if (stat.getAttribute('data-stat') === 'catalog-count') {
+                stat.setAttribute('data-target', String(catalogCount));
+            }
         });
-        
-        statNumbers.forEach(stat => observer.observe(stat));
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const stat = entry.target;
+                        const target = parseInt(stat.getAttribute('data-target'), 10) || 0;
+                        let current = 0;
+                        const increment = target / 100 || 1;
+
+                        const updateCounter = () => {
+                            if (current < target) {
+                                current += increment;
+                                stat.textContent = Math.ceil(current);
+                                setTimeout(updateCounter, 20);
+                            } else {
+                                stat.textContent = target;
+                            }
+                        };
+
+                        updateCounter();
+                        observer.unobserve(stat);
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        statNumbers.forEach((stat) => observer.observe(stat));
     }
     
     setupSkillFiltering() {
