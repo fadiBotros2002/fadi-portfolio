@@ -58,7 +58,7 @@ Preferred path (Netlify 302 → `/?project=…`; do not use 200 rewrite without 
 | Odoo KDS | `/p/odoo-kds` |
 | VisionMate | `/p/visionmate` |
 | Wazefni | `/p/wazefni` |
-| Tawtheeq | `/p/tawtheeq` |
+| Tawtheeq (hidden) | `/p/tawtheeq` — rewrite exists; card not rendered until unhidden |
 | Smart Expense | `/p/smart-expense` |
 | Graduation | `/p/graduation-system` |
 | Proxmox alerts | `/p/proxmox-alerts` |

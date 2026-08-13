@@ -11,6 +11,8 @@ Source of truth for editing this repo. **Do not gitignore** — these files ship
 | [i18n.md](./i18n.md) | Languages, translation keys, RTL |
 | [showcase/](./showcase/) | Context for each live project card |
 
+**Currently hidden (keep; restore on request):** `tawtheeq` — `hidden: true` in catalog. Spec: [showcase/tawtheeq.md](./showcase/tawtheeq.md).
+
 **Removed from site (do not re-add):** Maestro (beginner sample). Image file `assets/images/projects/maestro.png` may still exist unused.
 
 Agent rule: `.cursor/rules/portfolio-specs.mdc` (always apply) points here.

@@ -40,7 +40,7 @@
 | `odoo-kds` | odoo | Images in `odoo/kds/cover.png` + `1.png`…`4.png` |
 | `visionmate` | software | Featured + LinkedIn rows |
 | `wazefni` | software | Featured + LinkedIn video |
-| `tawtheeq` | software | Keep even if lightly named on CV (ASAS EDMS) |
+| `tawtheeq` | software | **Hidden** (2026-08-13). Keep catalog + i18n + images; unhide via `hidden: false`. CV name: ASAS EDMS |
 | `smart-expense` | software | Freelance |
 | `graduation-system` | software | Freelance |
 | `proxmox-alerts` | software | SAMWare |
